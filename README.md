@@ -3,8 +3,8 @@ PROPAN is short for Propeller Panel Method. PROPAN is a panel code for the calcu
 # What is this repository?
 This is the PROPAN Potential Flow Code OFFICIAL repository.
 # Overview
-Panel code PROPAN has the following key capabilities:
-
+PROPAN Panel Code is complemented by a pre-processor (PROPANEL) and a post-processor (PROPOST). PROPANEL is a 3D surface grid generation tool. PROPOST is a post-processing tool that generates several output and solution files.
+# PROPAN capabilities:
 Input: ACII text files
 
 Wings: (not tested in latest version)
@@ -26,7 +26,7 @@ Wind Turbines:
 
 Output: solution output in ASCII text files with Tecplot format
 
-PROPAN runs on Windows and Linux workstations. All routines are written in FORTRAN 95, combined with LINPACK and IMSL FORTRAN 77 routines. The code is not parallelised.
+PROPANEL, PROPAN and PROPOST run on Windows and Linux workstations. All routines are written in FORTRAN 95, combined with LINPACK and IMSL FORTRAN 77 routines. The code is not parallelised.
 # Help, Bugs, Feedback
 If you need help with PROPAN, chat with developers or ask any other questions about PROPAN, you can hang out by email: propan.code@gmail.com. To report bugs, please create a GitHub issue or contact by email. More information consult: https://www.researchgate.net/project/PROPAN-potential-flow-code-for-foils-and-rotors/
 # License
