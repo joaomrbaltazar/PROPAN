@@ -1,6 +1,6 @@
 #!/bin/bash
 # clean
-##rm -f Code/*.*
+rm -f Code/*.*
 ##rm -f ProPan2020_v1.2.out
 # Source Folder
 ifort -c -fltconsistency -fpe0 Base/propan_mod.f90
