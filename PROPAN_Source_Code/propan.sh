@@ -111,24 +111,24 @@ ifort -c -fltconsistency -fpe0 Base/output.f90
 ##ifort -c -fltconsistency -fpe0 Source/Field/presfStd.f90
 ##ifort -c -fltconsistency -fpe0 Source/Field/presfUnStd.f90
 # Calc Folder
-##ifort -c -fltconsistency -fpe0 Source/Calc/JacobianWet.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/JacobianCav.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/linint.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/intk1.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/splint.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/spline.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/ispline.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/gaussint.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/bisof.f
-##ifort -c -fltconsistency -fpe0 Source/Calc/CtCq.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/gaperrg.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/periodicflow.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/velinf.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/stret2.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/sxx.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/shxx.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/sdiv.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/frame.f90
+ifort -c -fltconsistency -fpe0 Calc/JacobianWet.f90
+ifort -c -fltconsistency -fpe0 Calc/JacobianCav.f90
+ifort -c -fltconsistency -fpe0 Calc/linint.f90
+ifort -c -fltconsistency -fpe0 Calc/intk1.f90
+ifort -c -fltconsistency -fpe0 Calc/splint.f90
+ifort -c -fltconsistency -fpe0 Calc/gaussint.f90
+ifort -c -fltconsistency -fpe0 Calc/CtCq.f90
+ifort -c -fltconsistency -fpe0 Calc/gaperrg.f90
+ifort -c -fltconsistency -fpe0 Calc/periodicflow.f90
+ifort -c -fltconsistency -fpe0 Calc/velinf.f90
+ifort -c -fltconsistency -fpe0 Calc/stret2.f90
+ifort -c -fltconsistency -fpe0 Calc/sxx.f90
+ifort -c -fltconsistency -fpe0 Calc/shxx.f90
+ifort -c -fltconsistency -fpe0 Calc/sdiv.f90
+ifort -c -fltconsistency -fpe0 Calc/frame.f90
+cp Calc/spline.o .
+cp Calc/ispline.o .
+cp Calc/bisof.o .
 # Linpack Folder
 ##ifort -c -fltconsistency -fpe0 Source/Linpack/cubspl.f
 ##ifort -c -fltconsistency -fpe0 Source/Linpack/daxpy.f
