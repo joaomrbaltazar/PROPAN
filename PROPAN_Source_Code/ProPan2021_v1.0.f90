@@ -91,7 +91,7 @@ PROGRAM PROPAN
 !    NWA       =    Number of wake alignment iterations                                         !
 !    IWA       =    Choice on the wake model                                                    !
 !                   IWA=1: Model 1                                                              !
-!                   IWA=2: Model 2 (not available)                                              ! 
+!                   IWA=2: Model 2                                                              ! 
 !    NWALIGN   =    Number of panels to be aligned                                              !
 !    ITE       =    Mangler-Smith condition at the TE                                           !
 !    NRV       =    Number of radial points to compute the induced velocities                   !
