@@ -1,5 +1,6 @@
 #!/bin/bash
 # clean
+mkdir -p Code
 rm -f Code/*.*
 ##rm -f ProPan2020_v1.2.out
 # Source Folder
@@ -215,8 +216,8 @@ cp Calc/bisof.o .
 ##ifort -c -fltconsistency -fpe0 Source/IMSL/umach.f
 # Executable
 ##ifort -o ProPan2020_v1.2.out *.o
-##mv *.o Code
-##mv *.mod Code
+mv *.o Code
+mv *.mod Code
 ##if [ -f ProPan2020_v1.2.out ]; then
 ##   cp ProPan2020_v1.2.out Code
 ##fi
