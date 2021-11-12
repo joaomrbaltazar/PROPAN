@@ -21,10 +21,10 @@ ifort -c -fltconsistency -fpe0 Geom/hubgeom.f90
 ifort -c -fltconsistency -fpe0 Geom/panel.f90
 ifort -c -fltconsistency -fpe0 Geom/pancoor.f90
 # Numdif Folder
-##ifort -c -fltconsistency -fpe0 Source/Numdif/numdifblade.f90
-##ifort -c -fltconsistency -fpe0 Source/Numdif/numdifbladewake.f90
-##ifort -c -fltconsistency -fpe0 Source/Numdif/numdifnozzle.f90
-##ifort -c -fltconsistency -fpe0 Source/Numdif/numdifhub.f90
+ifort -c -fltconsistency -fpe0 Numdif/numdifblade.f90
+ifort -c -fltconsistency -fpe0 Numdif/numdifbladewake.f90
+ifort -c -fltconsistency -fpe0 Numdif/numdifnozzle.f90
+ifort -c -fltconsistency -fpe0 Numdif/numdifhub.f90
 # InfCoef Folder
 ##ifort -c -fltconsistency -fpe0 Source/InfCoef/InfCoefMatrixStd.f90
 ##ifort -c -fltconsistency -fpe0 Source/InfCoef/InfCoefMatrixUnStd.f90
