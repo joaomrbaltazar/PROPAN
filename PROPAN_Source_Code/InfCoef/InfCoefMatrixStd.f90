@@ -1,5 +1,5 @@
 !-----------------------------------------------------------------------------------------------!
-!    Compute Matrices of Influence Coefficients                                                 !
+!    Compute Matrices of Influence Coefficients. Steady Case                                    !
 !    Copyright (C) 2021  J. Baltazar and J.A.C. Falcão de Campos                                !
 !                                                                                               !
 !    This program is free software: you can redistribute it and/or modify it under the terms of !
