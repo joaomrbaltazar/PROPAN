@@ -4,8 +4,23 @@ PROPAN is short for Propeller Panel Method. PROPAN is a panel code for the calcu
 This is the PROPAN Potential Flow Code OFFICIAL repository.
 # Overview
 PROPAN Panel Code is complemented by a pre-processor (PROPANEL) and a post-processor (PROPOST). PROPANEL is a 3D surface grid generation tool. PROPOST is a post-processing tool that generates several output and solution files.
+# PROPANEL capabilities:
+Input: ASCII text files
+
+Wings:
+* conventional and quasi-orthogonal grids
+* conventional grid for delta wings
+* trailing-edge wake grid (user-specify or empirical models)
+* leading-edge wake grid (empirical model for delta wings)
+* Propellers & Turbines: (Open or Ducted)
+* conventional and quasi-orthogonal blade grids
+* hub grid
+* duct grid
+* blade and duct wake grids (user-specify or empirical models)
+
+Output: solution output in ASCII text files with Tecplot format
 # PROPAN capabilities:
-Input: ACII text files
+Input: ASCII text files
 
 Wings: (not tested in latest version)
 * steady flow
