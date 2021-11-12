@@ -12,13 +12,14 @@ Wings:
 * conventional grid for delta wings
 * trailing-edge wake grid (user-specify or empirical models)
 * leading-edge wake grid (empirical model for delta wings)
-* Propellers & Turbines: (Open or Ducted)
+
+Propellers & Turbines: (Open or Ducted)
 * conventional and quasi-orthogonal blade grids
 * hub grid
 * duct grid
 * blade and duct wake grids (user-specify or empirical models)
 
-Output: solution output in ASCII text files with Tecplot format
+Output: grid output in ASCII text files with Tecplot format
 # PROPAN capabilities:
 Input: ASCII text files
 
