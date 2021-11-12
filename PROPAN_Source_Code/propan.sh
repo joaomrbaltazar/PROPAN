@@ -2,7 +2,7 @@
 # clean
 mkdir -p Code
 rm -f Code/*.*
-##rm -f ProPan2020_v1.2.out
+rm -f ProPan2021_v1.0.out
 # Source Folder
 ifort -c -fltconsistency -fpe0 Base/propan_mod.f90
 ifort -c -fltconsistency -fpe0 Base/ProPan2020_v1.2.f90
@@ -13,13 +13,13 @@ ifort -c -fltconsistency -fpe0 Base/delvars.f90
 ifort -c -fltconsistency -fpe0 Base/counters.f90
 ifort -c -fltconsistency -fpe0 Base/output.f90
 # Geom Folder
-##ifort -c -fltconsistency -fpe0 Source/Geom/bladegeom.f90
-##ifort -c -fltconsistency -fpe0 Source/Geom/bladewakegeom.f90
-##ifort -c -fltconsistency -fpe0 Source/Geom/nozzlegeom.f90
-##ifort -c -fltconsistency -fpe0 Source/Geom/nozzlewakegeom.f90
-##ifort -c -fltconsistency -fpe0 Source/Geom/hubgeom.f90
-##ifort -c -fltconsistency -fpe0 Source/Geom/panel.f90
-##ifort -c -fltconsistency -fpe0 Source/Geom/pancoor.f90
+ifort -c -fltconsistency -fpe0 Geom/bladegeom.f90
+ifort -c -fltconsistency -fpe0 Geom/bladewakegeom.f90
+ifort -c -fltconsistency -fpe0 Geom/nozzlegeom.f90
+ifort -c -fltconsistency -fpe0 Geom/nozzlewakegeom.f90
+ifort -c -fltconsistency -fpe0 Geom/hubgeom.f90
+ifort -c -fltconsistency -fpe0 Geom/panel.f90
+ifort -c -fltconsistency -fpe0 Geom/pancoor.f90
 # Numdif Folder
 ##ifort -c -fltconsistency -fpe0 Source/Numdif/numdifblade.f90
 ##ifort -c -fltconsistency -fpe0 Source/Numdif/numdifbladewake.f90
@@ -215,9 +215,9 @@ cp Calc/bisof.o .
 ##ifort -c -fltconsistency -fpe0 Source/IMSL/s1anum.f
 ##ifort -c -fltconsistency -fpe0 Source/IMSL/umach.f
 # Executable
-##ifort -o ProPan2020_v1.2.out *.o
+ifort -o ProPan2021_v1.0.out *.o
 mv *.o Code
 mv *.mod Code
-##if [ -f ProPan2020_v1.2.out ]; then
-##   cp ProPan2020_v1.2.out Code
-##fi
+if [ -f ProPan2021_v1.0.out ]; then
+   cp ProPan2021_v1.0.out Code
+fi
