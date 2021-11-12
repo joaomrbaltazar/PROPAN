@@ -51,7 +51,7 @@ Output: solution output in ASCII text files with Tecplot format
 * wake geometry at downstream plane
 * 2D cavitation patterns
 * 2D viscous effects (section lift and drag corrections)
-* harmonic analysis for Unsteady Flow
+* harmonic analysis for unsteady flow
 
 PROPANEL, PROPAN and PROPOST run on Windows and Linux workstations. All routines are written in FORTRAN 95, combined with LINPACK and IMSL FORTRAN 77 routines. The code is not parallelised.
 # Help, Bugs, Feedback
