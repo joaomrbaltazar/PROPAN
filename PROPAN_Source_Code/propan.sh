@@ -26,8 +26,8 @@ ifort -c -fltconsistency -fpe0 Numdif/numdifbladewake.f90
 ifort -c -fltconsistency -fpe0 Numdif/numdifnozzle.f90
 ifort -c -fltconsistency -fpe0 Numdif/numdifhub.f90
 # InfCoef Folder
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/InfCoefMatrixStd.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/InfCoefMatrixUnStd.f90
+ifort -c -fltconsistency -fpe0 InfCoef/InfCoefMatrixStd.f90
+ifort -c -fltconsistency -fpe0 InfCoef/InfCoefMatrixUnStd.f90
 # PotCoef Folder
 ##ifort -c -fltconsistency -fpe0 Source/InfCoef/PotCoef/bladecoef.f90
 ##ifort -c -fltconsistency -fpe0 Source/InfCoef/PotCoef/bladewakecoef.f90
