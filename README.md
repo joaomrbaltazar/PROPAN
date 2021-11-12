@@ -57,4 +57,4 @@ PROPANEL, PROPAN and PROPOST run on Windows and Linux workstations. All routines
 # Help, Bugs, Feedback
 If you need help with PROPAN, chat with developers or ask any other questions about PROPAN, you can hang out by email: propan.code@gmail.com. To report bugs, please create a GitHub issue or contact by email. More information consult: https://www.researchgate.net/project/PROPAN-potential-flow-code-for-foils-and-rotors/
 # License
-GNU Affero General Public License v3.0. See the http://www.gnu.org/licenses/agpl-3.0.html web page for more information.
+GNU Affero General Public License v3.0. See http://www.gnu.org/licenses/agpl-3.0.html for more information.
