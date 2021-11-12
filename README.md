@@ -42,6 +42,17 @@ Wind Turbines:
 
 Output: solution output in ASCII text files with Tecplot format
 
+# PROPOST capabilities:
+Input: ASCII text files
+
+Output: solution output in ASCII text files with Tecplot format
+* 2D blade pressure distribution
+* 2D duct pressure distribution
+* wake geometry at downstream plane
+* 2D cavitation patterns
+* 2D viscous effects (section lift and drag corrections)
+* harmonic analysis for Unsteady Flow
+
 PROPANEL, PROPAN and PROPOST run on Windows and Linux workstations. All routines are written in FORTRAN 95, combined with LINPACK and IMSL FORTRAN 77 routines. The code is not parallelised.
 # Help, Bugs, Feedback
 If you need help with PROPAN, chat with developers or ask any other questions about PROPAN, you can hang out by email: propan.code@gmail.com. To report bugs, please create a GitHub issue or contact by email. More information consult: https://www.researchgate.net/project/PROPAN-potential-flow-code-for-foils-and-rotors/
