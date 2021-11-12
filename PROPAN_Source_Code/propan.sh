@@ -83,9 +83,9 @@ ifort -c -fltconsistency -fpe0 Base/output.f90
 ##ifort -c -fltconsistency -fpe0 Source/VtCp/velh.f90
 ##ifort -c -fltconsistency -fpe0 Source/VtCp/presh.f90
 # Wake Folder
-##ifort -c -fltconsistency -fpe0 Source/Calc/Wake/vwake.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/Wake/fourier_coef.f90
-##ifort -c -fltconsistency -fpe0 Source/Calc/Wake/fourier_function.f90
+ifort -c -fltconsistency -fpe0 Calc/Wake/vwake.f90
+ifort -c -fltconsistency -fpe0 Calc/Wake/fourier_coef.f90
+ifort -c -fltconsistency -fpe0 Calc/Wake/fourier_function.f90
 # Grids Folder
 ##ifort -c -fltconsistency -fpe0 Source/Grids/hubgrid.f90
 ##ifort -c -fltconsistency -fpe0 Source/Grids/nozzlegrid.f90
