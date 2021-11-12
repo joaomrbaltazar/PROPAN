@@ -29,14 +29,14 @@ ifort -c -fltconsistency -fpe0 Numdif/numdifhub.f90
 ifort -c -fltconsistency -fpe0 InfCoef/InfCoefMatrixStd.f90
 ifort -c -fltconsistency -fpe0 InfCoef/InfCoefMatrixUnStd.f90
 # PotCoef Folder
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/PotCoef/bladecoef.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/PotCoef/bladewakecoef.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/PotCoef/nozzlecoef.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/PotCoef/nozzlewakecoef.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/PotCoef/hubcoef.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/PotCoef/potpan.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/PotCoef/potpan_num.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/PotCoef/potlinsub.f90
+ifort -c -fltconsistency -fpe0 InfCoef/PotCoef/bladecoef.f90
+ifort -c -fltconsistency -fpe0 InfCoef/PotCoef/bladewakecoef.f90
+ifort -c -fltconsistency -fpe0 InfCoef/PotCoef/nozzlecoef.f90
+ifort -c -fltconsistency -fpe0 InfCoef/PotCoef/nozzlewakecoef.f90
+ifort -c -fltconsistency -fpe0 InfCoef/PotCoef/hubcoef.f90
+ifort -c -fltconsistency -fpe0 InfCoef/PotCoef/potpan.f90
+ifort -c -fltconsistency -fpe0 InfCoef/PotCoef/potpan_num.f90
+ifort -c -fltconsistency -fpe0 InfCoef/PotCoef/potlinsub.f90
 # VelCoef Folder
 ##ifort -c -fltconsistency -fpe0 Source/InfCoef/VelCoef/bladevelo.f90
 ##ifort -c -fltconsistency -fpe0 Source/InfCoef/VelCoef/bladewakevelo.f90
