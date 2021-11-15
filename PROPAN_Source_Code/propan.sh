@@ -38,14 +38,14 @@ ifort -c -fltconsistency -fpe0 InfCoef/PotCoef/potpan.f90
 ifort -c -fltconsistency -fpe0 InfCoef/PotCoef/potpan_num.f90
 ifort -c -fltconsistency -fpe0 InfCoef/PotCoef/potlinsub.f90
 # VelCoef Folder
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/VelCoef/bladevelo.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/VelCoef/bladewakevelo.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/VelCoef/nozzlevelo.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/VelCoef/nozzlewakevelo.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/VelCoef/hubvelo.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/VelCoef/imagehubvelo.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/VelCoef/velpan.f90
-##ifort -c -fltconsistency -fpe0 Source/InfCoef/VelCoef/gaussvel.f90
+ifort -c -fltconsistency -fpe0 InfCoef/VelCoef/bladevelo.f90
+ifort -c -fltconsistency -fpe0 InfCoef/VelCoef/bladewakevelo.f90
+ifort -c -fltconsistency -fpe0 InfCoef/VelCoef/nozzlevelo.f90
+ifort -c -fltconsistency -fpe0 InfCoef/VelCoef/nozzlewakevelo.f90
+ifort -c -fltconsistency -fpe0 InfCoef/VelCoef/hubvelo.f90
+ifort -c -fltconsistency -fpe0 InfCoef/VelCoef/imagehubvelo.f90
+ifort -c -fltconsistency -fpe0 InfCoef/VelCoef/velpan.f90
+ifort -c -fltconsistency -fpe0 InfCoef/VelCoef/gaussvel.f90
 # Solve Folder
 ##ifort -c -fltconsistency -fpe0 Source/Solve/SolveRhsWet.f90
 ##ifort -c -fltconsistency -fpe0 Source/Solve/SolveRhsCav.f90
