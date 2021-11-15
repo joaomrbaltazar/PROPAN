@@ -1,5 +1,5 @@
 !-----------------------------------------------------------------------------------------------!
-!    Copyright (C) 2021  J. Baltazar and J.A.C. Falcão de Campos                                !
+!    Copyright (C) 2021  J. Baltazar                                                            !
 !                                                                                               !
 !    This program is free software: you can redistribute it and/or modify it under the terms of !
 !    the GNU Affero General Public License as published by the Free Software Foundation, either !
