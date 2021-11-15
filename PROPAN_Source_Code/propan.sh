@@ -47,14 +47,14 @@ ifort -c -fltconsistency -fpe0 InfCoef/VelCoef/imagehubvelo.f90
 ifort -c -fltconsistency -fpe0 InfCoef/VelCoef/velpan.f90
 ifort -c -fltconsistency -fpe0 InfCoef/VelCoef/gaussvel.f90
 # Solve Folder
-##ifort -c -fltconsistency -fpe0 Source/Solve/SolveRhsWet.f90
-##ifort -c -fltconsistency -fpe0 Source/Solve/SolveRhsCav.f90
-##ifort -c -fltconsistency -fpe0 Source/Solve/SolveRhsCavRed.f90
-##ifort -c -fltconsistency -fpe0 Source/Solve/SolveLkWet.f90
-##ifort -c -fltconsistency -fpe0 Source/Solve/SolveLkCav.f90
-##ifort -c -fltconsistency -fpe0 Source/Solve/SolveIpkcWet.f90
-##ifort -c -fltconsistency -fpe0 Source/Solve/SolveIpkcCav.f90
-##ifort -c -fltconsistency -fpe0 Source/Solve/SolveWake.f90
+ifort -c -fltconsistency -fpe0 Solve/SolveRhsWet.f90
+ifort -c -fltconsistency -fpe0 Solve/SolveRhsCav.f90
+ifort -c -fltconsistency -fpe0 Solve/SolveRhsCavRed.f90
+ifort -c -fltconsistency -fpe0 Solve/SolveLkWet.f90
+ifort -c -fltconsistency -fpe0 Solve/SolveLkCav.f90
+ifort -c -fltconsistency -fpe0 Solve/SolveIpkcWet.f90
+ifort -c -fltconsistency -fpe0 Solve/SolveIpkcCav.f90
+ifort -c -fltconsistency -fpe0 Solve/SolveWake.f90
 # WakeAlign Folder
 ##ifort -c -fltconsistency -fpe0 Source/WakeAlign/wakealign1.f90
 ##ifort -c -fltconsistency -fpe0 Source/WakeAlign/wakealign2.f90
