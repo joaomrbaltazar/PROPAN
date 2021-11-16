@@ -65,14 +65,14 @@ cp WakeAlign/wakealign2.o .
 cp WakeAlign/geoduct37.o .
 cp WakeAlign/ff.o .
 # Cav Folder
-##ifort -c -fltconsistency -fpe0 Source/Cav/cavcheck.f90
-##ifort -c -fltconsistency -fpe0 Source/Cav/cavprop.f90
-##ifort -c -fltconsistency -fpe0 Source/Cav/caverrc.f90
-##ifort -c -fltconsistency -fpe0 Source/Cav/cavpotp.f90
-##ifort -c -fltconsistency -fpe0 Source/Cav/cavpots.f90
-##ifort -c -fltconsistency -fpe0 Source/Cav/cavthickp.f90
-##ifort -c -fltconsistency -fpe0 Source/Cav/cavthicks.f90
-##ifort -c -fltconsistency -fpe0 Source/Cav/cavrecover.f90
+ifort -c -fltconsistency -fpe0 Cav/cavcheck.f90
+ifort -c -fltconsistency -fpe0 Cav/cavprop.f90
+ifort -c -fltconsistency -fpe0 Cav/caverrc.f90
+ifort -c -fltconsistency -fpe0 Cav/cavpotp.f90
+ifort -c -fltconsistency -fpe0 Cav/cavpots.f90
+ifort -c -fltconsistency -fpe0 Cav/cavthickp.f90
+ifort -c -fltconsistency -fpe0 Cav/cavthicks.f90
+ifort -c -fltconsistency -fpe0 Cav/cavrecover.f90
 # VtCp Folder
 ##ifort -c -fltconsistency -fpe0 Source/VtCp/velp.f90
 ##ifort -c -fltconsistency -fpe0 Source/VtCp/velpw.f90
