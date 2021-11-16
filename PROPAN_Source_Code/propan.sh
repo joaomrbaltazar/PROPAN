@@ -56,14 +56,14 @@ ifort -c -fltconsistency -fpe0 Solve/SolveIpkcWet.f90
 ifort -c -fltconsistency -fpe0 Solve/SolveIpkcCav.f90
 ifort -c -fltconsistency -fpe0 Solve/SolveWake.f90
 # WakeAlign Folder
-##ifort -c -fltconsistency -fpe0 Source/WakeAlign/wakealign1.f90
-##ifort -c -fltconsistency -fpe0 Source/WakeAlign/wakealign2.f90
-##ifort -c -fltconsistency -fpe0 Source/WakeAlign/nozzledef.f90
-##ifort -c -fltconsistency -fpe0 Source/WakeAlign/geoduct37.f90
-##ifort -c -fltconsistency -fpe0 Source/WakeAlign/bladewakedisp.f90
-##ifort -c -fltconsistency -fpe0 Source/WakeAlign/nozzledisp.f90
-##ifort -c -fltconsistency -fpe0 Source/WakeAlign/nozzlewakedisp.f90
-##ifort -c -fltconsistency -fpe0 Source/WakeAlign/ff.f90
+ifort -c -fltconsistency -fpe0 WakeAlign/wakealign1.f90
+ifort -c -fltconsistency -fpe0 WakeAlign/nozzledef.f90
+ifort -c -fltconsistency -fpe0 WakeAlign/bladewakedisp.f90
+ifort -c -fltconsistency -fpe0 WakeAlign/nozzledisp.f90
+ifort -c -fltconsistency -fpe0 WakeAlign/nozzlewakedisp.f90
+cp WakeAlign/wakealign2.o .
+cp WakeAlign/geoduct37.o .
+cp WakeAlign/ff.o .
 # Cav Folder
 ##ifort -c -fltconsistency -fpe0 Source/Cav/cavcheck.f90
 ##ifort -c -fltconsistency -fpe0 Source/Cav/cavprop.f90
