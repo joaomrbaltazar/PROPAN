@@ -74,14 +74,14 @@ ifort -c -fltconsistency -fpe0 Cav/cavthickp.f90
 ifort -c -fltconsistency -fpe0 Cav/cavthicks.f90
 ifort -c -fltconsistency -fpe0 Cav/cavrecover.f90
 # VtCp Folder
-##ifort -c -fltconsistency -fpe0 Source/VtCp/velp.f90
-##ifort -c -fltconsistency -fpe0 Source/VtCp/velpw.f90
-##ifort -c -fltconsistency -fpe0 Source/VtCp/presp.f90
-##ifort -c -fltconsistency -fpe0 Source/VtCp/veln.f90
-##ifort -c -fltconsistency -fpe0 Source/VtCp/presn.f90
-##ifort -c -fltconsistency -fpe0 Source/VtCp/presnte.f90
-##ifort -c -fltconsistency -fpe0 Source/VtCp/velh.f90
-##ifort -c -fltconsistency -fpe0 Source/VtCp/presh.f90
+ifort -c -fltconsistency -fpe0 VtCp/velp.f90
+ifort -c -fltconsistency -fpe0 VtCp/velpw.f90
+ifort -c -fltconsistency -fpe0 VtCp/presp.f90
+ifort -c -fltconsistency -fpe0 VtCp/veln.f90
+ifort -c -fltconsistency -fpe0 VtCp/presn.f90
+ifort -c -fltconsistency -fpe0 VtCp/presnte.f90
+ifort -c -fltconsistency -fpe0 VtCp/velh.f90
+ifort -c -fltconsistency -fpe0 VtCp/presh.f90
 # Wake Folder
 ifort -c -fltconsistency -fpe0 Calc/Wake/vwake.f90
 ifort -c -fltconsistency -fpe0 Calc/Wake/fourier_coef.f90
