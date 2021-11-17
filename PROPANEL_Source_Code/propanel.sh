@@ -40,9 +40,9 @@ cp Grape/splin.o .
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/sxx.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/shxx.f90
 # Linpack Folder
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Linpack/cubspl.f
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Linpack/ppvalu.f
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Linpack/interv.f
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Linpack/cubspl.f
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Linpack/ppvalu.f
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Linpack/interv.f
 # Executable
 ifort -o ProPanel2021_v1.0_debug.out *.o
 mv *.o Code
