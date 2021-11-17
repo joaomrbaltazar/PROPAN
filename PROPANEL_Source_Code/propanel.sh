@@ -17,16 +17,16 @@ ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/progress.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grids/geoduct37.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grids/hubgrid.f90
 # Grape Folder
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grape/angri.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grape/bord.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grape/calcb.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grape/calphi.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grape/coef.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grape/grape.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grape/guessa.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grape/rhs.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grape/sip.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grape/splin.f90
+cp Grape/angri.o .
+cp Grape/bord.o .
+cp Grape/calcb.o .
+cp Grape/calphi.o .
+cp Grape/coef.o .
+cp Grape/grape.o .
+cp Grape/guessa.o .
+cp Grape/rhs.o .
+cp Grape/sip.o .
+cp Grape/splin.o .
 # Calc Folder
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/linint.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/intk1.f90
