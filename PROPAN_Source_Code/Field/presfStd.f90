@@ -1,5 +1,5 @@
 !-----------------------------------------------------------------------------------------------!
-!    Calculation of the Pressure Field                                                          !
+!    Calculation of the Steady Pressure Field                                                   !
 !    Copyright (C) 2021  J. Baltazar                                                            !
 !                                                                                               !
 !    This program is free software: you can redistribute it and/or modify it under the terms of !
