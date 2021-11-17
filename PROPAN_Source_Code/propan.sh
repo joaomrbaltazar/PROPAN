@@ -91,26 +91,26 @@ ifort -c -fltconsistency -fpe0 Grids/hubgrid.f90
 ifort -c -fltconsistency -fpe0 Grids/nozzlegrid.f90
 ifort -c -fltconsistency -fpe0 Grids/nozzlewakegrid.f90
 # Grape Folder
-##ifort -c -fltconsistency -fpe0 Source/Grids/Grape/angri.f90
-##ifort -c -fltconsistency -fpe0 Source/Grids/Grape/bord.f90
-##ifort -c -fltconsistency -fpe0 Source/Grids/Grape/calcb.f90
-##ifort -c -fltconsistency -fpe0 Source/Grids/Grape/calphi.f90
-##ifort -c -fltconsistency -fpe0 Source/Grids/Grape/coef.f90
-##ifort -c -fltconsistency -fpe0 Source/Grids/Grape/grape.f90
-##ifort -c -fltconsistency -fpe0 Source/Grids/Grape/guessa.f90
-##ifort -c -fltconsistency -fpe0 Source/Grids/Grape/rhs.f90
-##ifort -c -fltconsistency -fpe0 Source/Grids/Grape/sip.f90
-##ifort -c -fltconsistency -fpe0 Source/Grids/Grape/splin.f90
+cp Grids/Grape/angri.o .
+cp Grids/Grape/bord.o .
+cp Grids/Grape/calcb.o .
+cp Grids/Grape/calphi.o .
+cp Grids/Grape/coef.o .
+cp Grids/Grape/grape.o .
+cp Grids/Grape/guessa.o .
+cp Grids/Grape/rhs.o .
+cp Grids/Grape/sip.o .
+cp Grids/Grape/splin.o .
 # Field Folder
-##ifort -c -fltconsistency -fpe0 Source/Field/bladecoeff.f90
-##ifort -c -fltconsistency -fpe0 Source/Field/bladewakecoeff.f90
-##ifort -c -fltconsistency -fpe0 Source/Field/hubcoeff.f90
-##ifort -c -fltconsistency -fpe0 Source/Field/nozzlecoeff.f90
-##ifort -c -fltconsistency -fpe0 Source/Field/nozzlewakecoeff.f90
-##ifort -c -fltconsistency -fpe0 Source/Field/velfStd.f90
-##ifort -c -fltconsistency -fpe0 Source/Field/velfUnStd.f90
-##ifort -c -fltconsistency -fpe0 Source/Field/presfStd.f90
-##ifort -c -fltconsistency -fpe0 Source/Field/presfUnStd.f90
+ifort -c -fltconsistency -fpe0 Field/bladecoeff.f90
+ifort -c -fltconsistency -fpe0 Field/bladewakecoeff.f90
+ifort -c -fltconsistency -fpe0 Field/hubcoeff.f90
+ifort -c -fltconsistency -fpe0 Field/nozzlecoeff.f90
+ifort -c -fltconsistency -fpe0 Field/nozzlewakecoeff.f90
+ifort -c -fltconsistency -fpe0 Field/velfStd.f90
+ifort -c -fltconsistency -fpe0 Field/velfUnStd.f90
+ifort -c -fltconsistency -fpe0 Field/presfStd.f90
+ifort -c -fltconsistency -fpe0 Field/presfUnStd.f90
 # Calc Folder
 ifort -c -fltconsistency -fpe0 Calc/JacobianWet.f90
 ifort -c -fltconsistency -fpe0 Calc/JacobianCav.f90
