@@ -1,12 +1,13 @@
 #!/bin/bash
 # clean
-##rm -f Code/*.*
-##rm -f ProPanel2020_v1.1_debug.out
+mkdir -p Code
+rm -f Code/*.*
+rm -f ProPanel2021_v1.0_debug.out
 # Source Folder
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/propanel_mod.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/ProPanel2020_v1.1.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/delvars.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/progress.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/propanel_mod.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/ProPanel2021_v1.0.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/delvars.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/progress.f90
 # Grids Folder
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grids/bladegrid.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grids/bladewakegrid.f90
@@ -43,9 +44,9 @@
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Linpack/ppvalu.f
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Linpack/interv.f
 # Executable
-##ifort -o ProPanel2020_v1.1_debug.out *.o
-##mv *.o Code
-##mv *.mod Code
-##if [ -f ProPanel2020_v1.1_debug.out ]; then
-##   cp ProPanel2020_v1.1_debug.out Code
-##fi
+ifort -o ProPanel2021_v1.0_debug.out *.o
+mv *.o Code
+mv *.mod Code
+if [ -f ProPanel2021_v1.0_debug.out ]; then
+   cp ProPanel2021_v1.0_debug.out Code
+fi
