@@ -9,13 +9,13 @@ ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/ProPanel2021_v1.0.f
 ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/delvars.f90
 ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/progress.f90
 # Grids Folder
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grids/bladegrid.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grids/bladewakegrid.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grids/nozzlegrid.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grids/nozzlewakegrid.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grids/nozzledef.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grids/geoduct37.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Grids/hubgrid.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Grids/bladegrid.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Grids/bladewakegrid.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Grids/nozzlegrid.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Grids/nozzlewakegrid.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Grids/nozzledef.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Grids/hubgrid.f90
+cp Grids/geoduct37.o .
 # Grape Folder
 cp Grape/angri.o .
 cp Grape/bord.o .
