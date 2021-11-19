@@ -28,17 +28,17 @@ cp Grape/rhs.o .
 cp Grape/sip.o .
 cp Grape/splin.o .
 # Calc Folder
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/linint.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/intk1.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/splint.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/spline.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/ispline.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/stret_choice.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/dscal.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/stret.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/stret2.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/sxx.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/shxx.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Calc/linint.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Calc/intk1.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Calc/splint.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Calc/stret_choice.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Calc/dscal.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Calc/stret.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Calc/stret2.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Calc/sxx.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Calc/shxx.f90
+cp Calc/spline.o .
+cp Calc/ispline.o .
 # Linpack Folder
 ifort -c -check bounds -traceback -fltconsistency -fpe0 Linpack/cubspl.f
 ifort -c -check bounds -traceback -fltconsistency -fpe0 Linpack/ppvalu.f
