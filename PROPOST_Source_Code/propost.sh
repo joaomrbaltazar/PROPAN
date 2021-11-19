@@ -10,11 +10,11 @@ ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/progress.f90
 ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/input.f90
 ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/delvars.f90
 # Plots Folder
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Plots/plotcp.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Plots/plotharm.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Plots/plotwake.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Plots/plotsol.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Plots/plotcav.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Plots/plotcp.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Plots/plotharm.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Plots/plotwake.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Plots/plotsol.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Plots/plotcav.f90
 # Calc Folder
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/linint.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/intk1.f90
