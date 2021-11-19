@@ -4,11 +4,11 @@ mkdir -p Code
 rm -f Code/*.*
 rm -f ProPost2021_v1.0_debug.out
 # Source Folder
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/propost_mod.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/ProPost2020_v1.0.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/progress.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/input.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/delvars.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/propost_mod.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/ProPost2020_v1.0.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/progress.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/input.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Base/delvars.f90
 # Plots Folder
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Plots/plotcp.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Plots/plotharm.f90
