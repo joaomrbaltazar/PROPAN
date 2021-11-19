@@ -1,7 +1,8 @@
 #!/bin/bash
 # clean
-##rm -f Code/*.*
-##rm -f ProPost2020_v1.0_debug.out
+mkdir -p Code
+rm -f Code/*.*
+rm -f ProPost2021_v1.0_debug.out
 # Source Folder
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/propost_mod.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/ProPost2020_v1.0.f90
@@ -28,9 +29,9 @@
 # Geom Folder
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Geom/panel.f90
 # Executable
-##ifort -o ProPost2020_v1.0_debug.out *.o
-##mv *.o Code
-##mv *.mod Code
-##if [ -f ProPost2020_v1.0_debug.out ]; then
-##   cp ProPost2020_v1.0_debug.out Code
-##fi
+ifort -o ProPost2021_v1.0_debug.out *.o
+mv *.o Code
+mv *.mod Code
+if [ -f ProPost2021_v1.0_debug.out ]; then
+   cp ProPost2021_v1.0_debug.out Code
+fi
