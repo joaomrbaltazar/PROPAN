@@ -27,7 +27,7 @@ ifort -c -check bounds -traceback -fltconsistency -fpe0 Plots/plotcav.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Visc/clcd.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Visc/interval.f90
 # Geom Folder
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Geom/panel.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Geom/panel.f90
 # Executable
 ifort -o ProPost2021_v1.0_debug.out *.o
 mv *.o Code
