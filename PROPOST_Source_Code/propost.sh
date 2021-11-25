@@ -23,9 +23,9 @@ ifort -c -check bounds -traceback -fltconsistency -fpe0 Plots/plotcav.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/ispline.f90
 ##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Calc/periodicflow.f90
 # Visc Folder
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Visc/viscor.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Visc/clcd.f90
-##ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Visc/interval.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Visc/viscor.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Visc/clcd.f90
+ifort -c -check bounds -traceback -fltconsistency -fpe0 Source/Visc/interval.f90
 # Geom Folder
 ifort -c -check bounds -traceback -fltconsistency -fpe0 Geom/panel.f90
 # Executable
