@@ -1,0 +1,27 @@
+ 
+ PROPAN2020 v1.2
+ 
+ Spanwise number of panels on the blade NRP=          30
+ Chordwise number of panels on the blade NCP=          40
+ Number of panels on the blade NPPAN=        1200
+ 
+ Spanwise number of panels on the blade wake NRW=          24
+ Streamwise number of panels on the blade wake NPW=         450
+ Number of panels on the blade NPWPAN=       10800
+ 
+ Circumferential number of panels on hub sector NHTP=           8
+ Axial number of panels on the hub NHX=          36
+ Number of panels on hub sector NHPAN=         288
+ 
+ Total number of body panels NPAN=        1488
+ Total number of wake panels NWPAN=       10800
+ 
+ TSR=   6.00000000000000     
+ 
+ T=           0
+ Kutta Condition Iter=           1  ERRK=  6.078631116364716E-002
+ Kutta Condition Iter=           2  ERRK=  4.949248829939357E-004
+ CTT=  0.677957605765729       CPT=  0.453788179999132     
+ CTH= -0.172867309981372       CPH=  0.134164030783745     
+ 
+ Operation time = 16.7 seconds
