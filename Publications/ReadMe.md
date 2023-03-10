@@ -25,4 +25,10 @@ J. Baltazar, J.A.C. Falcão de Campos. Prediction of Sheet Cavitation on Marine 
 
 J. Baltazar, J.A.C. Falcão de Campos. Potential Flow Modelling of Wind and Tidal Turbines with a Panel Method. INORE 2011 Symposium, 2011. https://www.researchgate.net/publication/336852577_Potential_Flow_Modelling_of_Wind_and_Tidal_Turbines_with_a_Panel_Method
 
+J. Baltazar, J.A.C. Falcão de Campos. Hydrodynamic Analysis of a Marine Current Turbine with a Boundary Element Method. INORE 2010 Symposium, 2010. https://www.researchgate.net/publication/336852835_Hydrodynamic_Analysis_of_a_Marine_Current_Turbine_with_a_Boundary_Element_Method
+
+J. Baltazar, J.A.C. Falcão de Campos. Potential Flow Calculations on Marine Current Turbines with a Boundary Element Method. INORE 2009 Sympoisum, 2009. https://www.researchgate.net/publication/336852572_Potential_Flow_Calculations_on_Marine_Current_Turbines_with_a_Boundary_Element_Method
+
 J. Baltazar, J.A.C. Falcão de Campos. A Boundary Element Method for the Unsteady Hydrodynamic Analysis of Marine Current Turbines. 2nd International Conference on Ocean Energy, 2008. https://www.researchgate.net/publication/344748180_A_Boundary_Element_Method_for_the_Unsteady_Hydrodynamic_Analysis_of_Marine_Current_Turbines
+
+J. Baltazar, J.A.C. Falcão de Campos. Unsteady Potential Flow Calculations on a Horizontal Axis Marine Current Turbine with a Boundary Element Method. INORE 2018 Symposium, 2008. https://www.researchgate.net/publication/336852564_Unsteady_Potential_Flow_Calculations_on_a_Horizontal_Axis_Marine_Current_Turbine_with_a_Boundary_Element_Method
