@@ -1,14 +1,14 @@
 # Journal Papers:
 
-J. Baltazar, J.A.C. Falcão de Campos, J. Bosschers, D. Rijpkema. Recent Developments in Computational Methods for the Analysis of Ducted Propellers in Open Water. Journal Ship Research 63, 219-234, 2019. doi: https://doi.org/10.5957/JOSR.09180063
+J. Baltazar, J.A.C. Falcão de Campos, J. Bosschers, D. Rijpkema. Recent Developments in Computational Methods for the Analysis of Ducted Propellers in Open Water. Journal Ship Research, Vol. 63, 219-234, 2019. doi: https://doi.org/10.5957/JOSR.09180063
 
-J. Baltazar, D. Rijpkema, J.A.C. Falcão de Campos, J. Bosschers. Prediction of the Open-Water Performance of Ducted Propellers with a Panel Method. Journal of Marine Science and Engineering, Vol. 6, 1, 2018. https://doi.org/10.3390/jmse6010027
+J. Baltazar, D. Rijpkema, J.A.C. Falcão de Campos, J. Bosschers. Prediction of the Open-Water Performance of Ducted Propellers with a Panel Method. Journal of Marine Science and Engineering, Vol. 6(1), 2018. https://doi.org/10.3390/jmse6010027
 
 J. Baltazar, J.A.C. Falcão de Campos, J. Bosschers. Open-Water Thrust and Torque Predictions of a Ducted Propeller System with a Panel Method. International Journal of Rotating Machinery, Vol. 2012, Article ID 474785, 11 pages, 2012. https://doi.org/10.1155/2012/474785
 
-J. Baltazar, J.A.C. Falcão de Campos. Hydrodynamic Analysis of a Horizontal Axis Marine Current Turbine With a Boundary Element Method. Journal of Offshore Mechanics and Arctic Engineering 133(4), 041304 (10 pages), 2011. https://doi.org/10.1115/1.4003387
+J. Baltazar, J.A.C. Falcão de Campos. Hydrodynamic Analysis of a Horizontal Axis Marine Current Turbine With a Boundary Element Method. Journal of Offshore Mechanics and Arctic Engineering, Vol. 133(4), 041304 (10 pages), 2011. https://doi.org/10.1115/1.4003387
 
-J. Baltazar, J.A.C. Falcão de Campos. An Iteratively Coupled Solution of the Cavitating Flow on Marine Propellers Using BEM. Journal of Hydrodynamics 22 (Suppl 1), 796-801, 2010. https://doi.org/10.1016/S1001-6058(10)60039-X
+J. Baltazar, J.A.C. Falcão de Campos. An Iteratively Coupled Solution of the Cavitating Flow on Marine Propellers Using BEM. Journal of Hydrodynamics, Vol. 22 (Suppl 1), 796-801, 2010. https://doi.org/10.1016/S1001-6058(10)60039-X
 
 
 # Theses:
