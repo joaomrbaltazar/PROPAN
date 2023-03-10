@@ -1,4 +1,4 @@
-Thesis:
+# Thesis:
 
 Leonardo Buralli. Aerodynamic Performance Prediction of a Wind Turbine in Steady and Unsteady Conditions Using a Panel Method. Master's Thesis, Instituto Superior Técnico, 2021. https://fenix.tecnico.ulisboa.pt/cursos/mege/dissertacao/1409728525633133
 
