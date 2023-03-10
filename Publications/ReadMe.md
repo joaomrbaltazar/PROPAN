@@ -21,6 +21,8 @@ João Baltazar. Numerical Study of the Potential Flow on the Tip of Elliptical W
 
 J. Baltazar, J.A.C. Falcão de Campos. Hydrodynamic Design and Analysis of Marine Current Turbines with Lifting Line and Panel Methods. North-American INORE 2012 Symposium, 2012. https://www.researchgate.net/publication/336852690_Hydrodynamic_Design_and_Analysis_of_Marine_Current_Turbines_with_Lifting_Line_and_Panel_Methods
 
-J. Balatzar, J.A.C. Falcão de Campos. Prediction of Sheet Cavitation on Marine Current Turbines with a Boundary Element Method. European INORE 2012 Symposium, 2012. https://www.researchgate.net/publication/336852683_Prediction_of_Sheet_Cavitation_on_Marine_Current_Turbines_with_a_Boundary_Element_Method
+J. Baltazar, J.A.C. Falcão de Campos. Prediction of Sheet Cavitation on Marine Current Turbines with a Boundary Element Method. European INORE 2012 Symposium, 2012. https://www.researchgate.net/publication/336852683_Prediction_of_Sheet_Cavitation_on_Marine_Current_Turbines_with_a_Boundary_Element_Method
+
+J. Baltazar, J.A.C. Falcão de Campos. Potential Flow Modelling of Wind and Tidal Turbines with a Panel Method. INORE 2011 Symposium, 2011. https://www.researchgate.net/publication/336852577_Potential_Flow_Modelling_of_Wind_and_Tidal_Turbines_with_a_Panel_Method
 
 J. Baltazar, J.A.C. Falcão de Campos. A Boundary Element Method for the Unsteady Hydrodynamic Analysis of Marine Current Turbines. 2nd International Conference on Ocean Energy, 2008. https://www.researchgate.net/publication/344748180_A_Boundary_Element_Method_for_the_Unsteady_Hydrodynamic_Analysis_of_Marine_Current_Turbines
