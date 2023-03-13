@@ -11,6 +11,20 @@ J. Baltazar, J.A.C. Falcão de Campos. Hydrodynamic Analysis of a Horizontal Axi
 J. Baltazar, J.A.C. Falcão de Campos. An Iteratively Coupled Solution of the Cavitating Flow on Marine Propellers Using BEM. Journal of Hydrodynamics, Vol. 22 (Suppl 1), 796-801, 2010. https://doi.org/10.1016/S1001-6058(10)60039-X
 
 
+# Conference Papers:
+
+J. Baltazar, D. Rijpkema, J.A.C. Falcão de Campos, J. Bosschers. A Comparison of Panel Method and RANS Calculations for a Ducted Propeller System in Open-Water. Proceedings in Third International Symposium on Marine Propulsors, Launceston, Tasmania, Australia, 2013. https://www.researchgate.net/publication/268686643_A_Comparison_of_Panel_Method_and_RANS_Calculations_for_a_Ducted_Propeller_System_in_Open-Water
+
+J. Baltazar, J. Machado, J.A.C. Falcão de Campos. Hydrodynamic Design and Analysis of Horizontal Axis Marine Current Turbines With Lifting Line and Panel Methods. Proceedings of the 30th International Conference on Ocean, Offshore and Arctic Engineering, Rotterdam, The Netherlands, 2011. https://www.researchgate.net/publication/268745009_Hydrodynamic_Design_and_Analysis_of_Horizontal_Axis_Marine_Current_Turbines_With_Lifting_Line_and_Panel_Methods
+
+J. Baltazar, J.A.C. Falcão de Campos. On the Modelling of the Flow in Ducted Propellers With a Panel Method. Proceedings of the First International Symposium on Marine Propulsors, Trondheim, Norway, 2009. https://www.researchgate.net/publication/269222599_On_the_Modelling_of_the_Flow_in_Ducted_Propellers_With_a_Panel_Method
+
+J. Baltazar, J.A.C. Falcão de Campos. A Boundary Element Method for the Unsteady Hydrodynamic Analysis of Marine Current Turbines. Proceedings of the 2nd International Conference on Ocean Energy, Brest, France, 2008. https://www.researchgate.net/publication/269104499_A_Boundary_Element_Method_for_the_Unsteady_Hydrodynamic_Analysis_of_Marine_Current_Turbines
+
+J. Baltazar, J.A.C. Falcão de Campos, J. Bosschers. A Study on the Modeling of Marine Propeller Tip Flows Using BEM. Proceedings of the Congreso de Métodos Numéricos en Ingenieria 2005, Granada, Spain, 2005. https://www.researchgate.net/publication/268686182_A_Study_on_the_Modeling_of_Marine_Propeller_Tip_Flows_Using_BEM
+
+J. Baltazar, J.A.C. Falcão de Campos, J. Bosschers. A Study on the Accuracy of Low and Higher Order BEM in Three-Dimensional Potential Flows Past Ellipsoids. Proceedings of the 5th International Conference on Boundary Element Techniques, Lisbon, Portugal, 2004. https://www.researchgate.net/publication/268686095_A_Study_on_the_Accuracy_of_Low_and_Higher_Order_BEM_in_Three-Dimensional_Potential_Flows_Past_Ellipsoids
+
 # Theses:
 
 Leonardo Buralli. Aerodynamic Performance Prediction of a Wind Turbine in Steady and Unsteady Conditions Using a Panel Method. Master's Thesis, Instituto Superior Técnico, 2021. https://fenix.tecnico.ulisboa.pt/cursos/mege/dissertacao/1409728525633133
