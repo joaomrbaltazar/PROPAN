@@ -104,7 +104,7 @@ J. Baltazar, J.A.C. Falcão de Campos. Unsteady Potential Flow Calculations on a
 
 J. Baltazar, J.A.C. Falcão de Campos. BEM Calculations of a Horizontal Axis Marine Current Turbine in Uniform and Yawed Inflow Conditions. Technical Report P.MCT-1,: Instituto Superior Técnico, 2008. https://doi.org/10.13140/2.1.2240.1602
 
-J. Baltazar. Potential Flow Calculations Around Ducted Propellers. Technical Report FTC/BD-3, Instituto Superior Técnico, 2007.
+J. Baltazar. Potential Flow Calculations Around Ducted Propellers. Technical Report FTC/BD-3, Instituto Superior Técnico, 2007. https://www.researchgate.net/publication/272472909_Potential_Flow_Calculations_Around_Ducted_Propellers
 
 J. Baltazar, J.A.C. Falcão de Campos. Propeller Unsteady Potential Panel Method. Technical Report J584-14, Instituto Superior Técnico, 2006. https://doi.org/10.13140/RG.2.1.1016.5527
 
