@@ -12,6 +12,8 @@ J. Baltazar, J.A.C. Falcão de Campos. An Iteratively Coupled Solution of the Ca
 
 J.A.C. Falcão de Campos, P.J.A. Ferreira de Sousa, J. Bosschers. A Verification Study on Low-Order Three-Dimensional Potential-Based Panel Codes. Computers & Fluids, 35, 61-73, 2006. https://doi.org/10.1016/j.compfluid.2004.08.002
 
+J. Baltazar, L. Eça. Generación de Mallas Estructuradas en Superfície. Información Tecnológica, 17, 107-116, 2005. http://dx.doi.org/10.4067/S0718-07642006000300016
+
 L. Eça, G.B. Vaz, J.A.C. Falcão de Campos, M. Hoekstra. Verification of Calculations of the Potential Flow Around Two-Dimensional Foils. AIAA Journal, Vol. 42(12), 2401-2407, 2004. https://doi.org/10.2514/1.782
 
 G.B. Vaz, L. Eça, J.A.C. Falcão de Campos. A Numerical Study on Low and Higher-Order Potential Based BEM for 2D Inviscid Flows. Computational Mechanics 32, 327-335, 2003. https://doi.org/10.1007/s00466-003-0490-8
@@ -62,7 +64,7 @@ J. Baltazar, J.A.C. Falcão de Campos. Hydrodynamic Analysis of a Horizontal Axi
 
 J. Baltazar, J.A.C. Falcão de Campos. Numerical Modelling of the Potential Flow Around Ducted Propellers. Proceedings of the Congresso de Métodos Numéricos em Engenharia, Porto, Portugal, 2007. https://www.researchgate.net/publication/269222834_Numerical_Modelling_of_the_Potential_Flow_Around_Ducted_Propellers
 
-J. Baltazar, L. Eça. Unsteady Potential Flow Calculations of Marine Propellers Using BEM. Proceedings of the Conferência Nacional de Métodos Numéricos em Mecânica dos Fluidos e Termodinâmica, Monte da Caparica, Portugal, 2006. https://www.researchgate.net/publication/344353518_Unsteady_Potential_Flow_Calculations_of_Marine_Propellers_Using_BEM
+J. Baltazar, J.A.C. Falcão de Campos. Unsteady Potential Flow Calculations of Marine Propellers Using BEM. Proceedings of the Conferência Nacional de Métodos Numéricos em Mecânica dos Fluidos e Termodinâmica, Monte da Caparica, Portugal, 2006. https://www.researchgate.net/publication/344353518_Unsteady_Potential_Flow_Calculations_of_Marine_Propellers_Using_BEM
 
 J. Baltazar, L. Eça. A Surface Grid Generation Technique for Practical Applications of Boundary Element Methods. Proceedings of the Conferência Nacional de Métodos Númericos em Mecânica dos Fluidos e Termodinâmica, Monte da Caparica, Portugal, 2006. https://www.researchgate.net/publication/269222734_A_Surface_Grid_Generation_Technique_for_Practical_Applications_of_Boundary_Element_Methods
 
