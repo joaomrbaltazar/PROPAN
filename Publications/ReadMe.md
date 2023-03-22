@@ -72,7 +72,7 @@ G.B. Vaz, J. Bosschers, J.A.C. Falcão de Campos. Validation of a BEM for Modell
 
 J. Baltazar, J.A.C. Falcão de Campos, J. Bosschers. A Study on the Accuracy of Low and Higher Order BEM in Three-Dimensional Potential Flows Past Ellipsoids. Proceedings of the 5th International Conference on Boundary Element Techniques, Lisbon, Portugal, 2004. https://www.researchgate.net/publication/268686095_A_Study_on_the_Accuracy_of_Low_and_Higher_Order_BEM_in_Three-Dimensional_Potential_Flows_Past_Ellipsoids
 
-G. Vaz, J. Bosschers, J.A.C. Falcão de Campos. Unsteady Effects in 2D Modelling of Partial Cavitation Using BEM. Métodos Computacionais em Engenharia, Lisboa, Portugal, 2004.
+G.B. Vaz, J. Bosschers, J.A.C. Falcão de Campos. Unsteady Effects in 2D Modelling of Partial Cavitation Using BEM. Métodos Computacionais em Engenharia, Lisboa, Portugal, 2004.
 
 G.B. Vaz, J. Bosschers, J.A.C. Falcão de Campos. Two-Dimensional Modelling of Partial Cavitation with BEM. Analysis of Several Models. Proceedings of the Fifth International Symposium on Cavitation (CAV2003). Osaka, Japan, 2003.
 
