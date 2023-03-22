@@ -10,10 +10,17 @@ J. Baltazar, J.A.C. Falcão de Campos. Hydrodynamic Analysis of a Horizontal Axi
 
 J. Baltazar, J.A.C. Falcão de Campos. An Iteratively Coupled Solution of the Cavitating Flow on Marine Propellers Using BEM. Journal of Hydrodynamics, Vol. 22 (Suppl 1), 796-801, 2010. https://doi.org/10.1016/S1001-6058(10)60039-X
 
+J.A.C. Falcão de Campos, P.J.A. Ferreira de Sousa, J. Bosschers. A Verification Study on Low-Order Three-Dimensional Potential-Based Panel Codes. Computers & Fluids, 35, 61-73, 2006. https://doi.org/10.1016/j.compfluid.2004.08.002
+
+L. Eça, G.B. Vaz, J.A.C. Falcão de Campos, M. Hoekstra. Verification of Calculations of the Potential Flow Around Two-Dimensional Foils. AIAA Journal, Vol. 42(12), 2401-2407, 2004. https://doi.org/10.2514/1.782
+
+G.B. Vaz, L. Eça, J.A.C. Falcão de Campos. A Numerical Study on Low and Higher-Order Potential Based BEM for 2D Inviscid Flows. Computational Mechanics 32, 327-335, 2003. https://doi.org/10.1007/s00466-003-0490-8
+
 
 # Chapters in Books:
 
 J. Baltazar, J.A.C. Falcão de Campos. A Comparison of Panel Method and RANS Calculations for a Horizontal Axis Marine Current Turbine. In book: CFD for Wind and Tidal Offshore Turbines. Publisher: Springer International Publishing. Editors: Esteban Ferrer, Adeline Montlaur. 2015, pp. 117-128. https://www.researchgate.net/publication/279175765_A_Comparison_of_Panel_Method_and_RANS_Calculations_for_a_Horizontal_Axis_Marine_Current_Turbine
+
 
 # Conference Papers:
 
@@ -61,7 +68,22 @@ J. Baltazar, L. Eça. A Surface Grid Generation Technique for Practical Applicat
 
 J. Baltazar, J.A.C. Falcão de Campos, J. Bosschers. A Study on the Modeling of Marine Propeller Tip Flows Using BEM. Proceedings of the Congreso de Métodos Numéricos en Ingeniería 2005, Granada, Spain, 2005. https://www.researchgate.net/publication/268686182_A_Study_on_the_Modeling_of_Marine_Propeller_Tip_Flows_Using_BEM
 
+G.B. Vaz, J. Bosschers, J.A.C. Falcão de Campos. Validation of a BEM for Modelling Steady Sheet Cavitation on Marine Propellers. Proceedings of the International Conference on Numerical Methods in Marine Engineering (MARINE 2005), Oslo, Norway, 2005.
+
 J. Baltazar, J.A.C. Falcão de Campos, J. Bosschers. A Study on the Accuracy of Low and Higher Order BEM in Three-Dimensional Potential Flows Past Ellipsoids. Proceedings of the 5th International Conference on Boundary Element Techniques, Lisbon, Portugal, 2004. https://www.researchgate.net/publication/268686095_A_Study_on_the_Accuracy_of_Low_and_Higher_Order_BEM_in_Three-Dimensional_Potential_Flows_Past_Ellipsoids
+
+G. Vaz, J. Bosschers, J.A.C. Falcão de Campos. Unsteady Effects in 2D Modelling of Partial Cavitation Using BEM. Métodos Computacionais em Engenharia, Lisboa, Portugal, 2004.
+
+G.B. Vaz, J. Bosschers, J.A.C. Falcão de Campos. Two-Dimensional Modelling of Partial Cavitation with BEM. Analysis of Several Models. Proceedings of the Fifth International Symposium on Cavitation (CAV2003). Osaka, Japan, 2003.
+
+G.B. Vaz, L. Eça, J.A.C. Falcão de Campos. Verification Study of Low and Higher-Order Potential Based Panel Methods for 2D Foils. 32nd AIAA Fluid Dynamics Conference and Exhibit, St. Louis, Missouri, 2002.
+
+G.B. Vaz, L. Eça, J.A.C. Falcão de Campos. On the Verification of a Potential Based Low-Order Boundary Element Method for Incompressible Flows. BEM 24, Sintra, Portugal, 2002.
+
+G.B. Vaz, L. Eça, J.A.C. Falcão de Campos. A Numerical Study on Low and Higher-Order Potential Based BEM for 2D Inviscid Flows. IABEM 2002, Austin, Texas, 2002.
+
+G.B. Vaz, L. Eça, J.A.C. Falcão de Campos. A Comparison of Velocity and Potential Based Boundary Element Methods for the Analysis of Steady 2D Flow Around Foils. BEM 22, Cambridge University, 2000.
+
 
 # Theses:
 
@@ -99,6 +121,7 @@ J. Baltazar, J.A.C. Falcão de Campos. Potential Flow Calculations on Marine Cur
 J. Baltazar, J.A.C. Falcão de Campos. A Boundary Element Method for the Unsteady Hydrodynamic Analysis of Marine Current Turbines. 2nd International Conference on Ocean Energy, 2008. https://www.researchgate.net/publication/344748180_A_Boundary_Element_Method_for_the_Unsteady_Hydrodynamic_Analysis_of_Marine_Current_Turbines
 
 J. Baltazar, J.A.C. Falcão de Campos. Unsteady Potential Flow Calculations on a Horizontal Axis Marine Current Turbine with a Boundary Element Method. INORE 2018 Symposium, 2008. https://www.researchgate.net/publication/336852564_Unsteady_Potential_Flow_Calculations_on_a_Horizontal_Axis_Marine_Current_Turbine_with_a_Boundary_Element_Method
+
 
 # Technical Reports:
 
