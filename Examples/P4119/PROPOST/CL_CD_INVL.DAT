@@ -1,0 +1,39 @@
+2                           ! Number of section radii
+0.1 1.0                     ! Section radii
+2 2                         ! Number of Reynolds numbers per section radius
+ZONE T="r01", F=POINT
+5000   10000000
+2 2                                                
+2 2                                                
+Reynolds=5000
+CL data
+-50.00     0.0
+ 50.00     0.0
+CD data
+-50.00     0.0
+ 50.00     0.0
+Reynolds=10000000
+CL data
+-50.00     0.0
+ 50.00     0.0
+CD data
+-50.00     0.0
+ 50.00     0.0
+ZONE T="r10", F=POINT
+5000   10000000
+2 2                                                
+2 2                                                
+Reynolds=5000
+CL data
+-50.00     0.0
+ 50.00     0.0
+CD data
+-50.00     0.0
+ 50.00     0.0
+Reynolds=10000000
+CL data
+-50.00     0.0
+ 50.00     0.0
+CD data
+-50.00     0.0
+ 50.00     0.0
