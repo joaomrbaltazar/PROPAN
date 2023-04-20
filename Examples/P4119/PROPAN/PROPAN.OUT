@@ -1,0 +1,92 @@
+ 
+ PROPAN2020 v1.2
+ 
+ Spanwise number of panels on the blade NRP=          40
+ Chordwise number of panels on the blade NCP=          80
+ Number of panels on the blade NPPAN=        3200
+ 
+ Spanwise number of panels on the blade wake NRW=          40
+ Streamwise number of panels on the blade wake NPW=         160
+ Number of panels on the blade NPWPAN=        6400
+ 
+ Circumferential number of panels on hub sector NHTP=          16
+ Axial number of panels on the hub NHX=          72
+ Number of panels on hub sector NHPAN=        1152
+ 
+ Total number of body panels NPAN=        4352
+ Total number of wake panels NWPAN=        6400
+ 
+   J=  0.500000000000000     
+ 
+ T=           0
+ Kutta Condition Iter=           1  ERRK=  5.261570640431590E-002
+ Kutta Condition Iter=           2  ERRK=  2.074844117787950E-002
+ Kutta Condition Iter=           3  ERRK=  9.225190931367866E-003
+ Kutta Condition Iter=           4  ERRK=  4.286683837978561E-003
+ Kutta Condition Iter=           5  ERRK=  2.029257120973599E-003
+ Kutta Condition Iter=           6  ERRK=  9.687370669087259E-004
+ KTP=  0.301378070015767       KQP=  4.210597607347051E-002
+ KTH= -5.813688211920681E-003  KQH=  6.703893193848002E-006
+ 
+   J=  0.600000000000000     
+ 
+ T=           0
+ Kutta Condition Iter=           1  ERRK=  2.551968651978226E-002
+ Kutta Condition Iter=           2  ERRK=  8.804515830604487E-003
+ Kutta Condition Iter=           3  ERRK=  3.466774831805963E-003
+ Kutta Condition Iter=           4  ERRK=  1.423788886619703E-003
+ Kutta Condition Iter=           5  ERRK=  5.933579307653980E-004
+ KTP=  0.258326994241329       KQP=  3.796723545698504E-002
+ KTH= -3.302697291263854E-003  KQH=  4.841464317397507E-006
+ 
+   J=  0.700000000000000     
+ 
+ T=           0
+ Kutta Condition Iter=           1  ERRK=  8.164208387821004E-003
+ Kutta Condition Iter=           2  ERRK=  2.019880835078841E-003
+ Kutta Condition Iter=           3  ERRK=  6.148011277836984E-004
+ KTP=  0.214658747283875       KQP=  3.311918570057320E-002
+ KTH= -1.384269978600063E-003  KQH=  3.285921321318968E-006
+ 
+   J=  0.833000000000000     
+ 
+ T=           0
+ Kutta Condition Iter=           1  ERRK=  1.173559045236847E-003
+ Kutta Condition Iter=           2  ERRK=  4.556119271073647E-004
+ KTP=  0.155652656083883       KQP=  2.557855609237651E-002
+ KTH=  2.474943866659004E-004  KQH=  1.694005391831951E-006
+ 
+   J=  0.900000000000000     
+ 
+ T=           0
+ Kutta Condition Iter=           1  ERRK=  8.518628772416006E-004
+ KTP=  0.125545814231304       KQP=  2.131143557601912E-002
+ KTH=  6.715918753409608E-004  KQH=  1.098659717105720E-006
+ 
+   J=   1.00000000000000     
+ 
+ T=           0
+ Kutta Condition Iter=           1  ERRK=  4.022792006702997E-003
+ Kutta Condition Iter=           2  ERRK=  5.162600430501246E-003
+ Kutta Condition Iter=           3  ERRK=  7.424145625537455E-003
+ Kutta Condition Iter=           4  ERRK=  4.342921630522162E-003
+ Kutta Condition Iter=           5  ERRK=  6.548908251191320E-003
+ Kutta Condition Iter=           6  ERRK=  4.664620908973072E-003
+ Kutta Condition Iter=           7  ERRK=  9.013541903710960E-003
+ Kutta Condition Iter=           8  ERRK=  4.262679502027324E-003
+ Kutta Condition Iter=           9  ERRK=  4.983628792835981E-003
+ Kutta Condition Iter=          10  ERRK=  8.445628756298271E-003
+ Kutta Condition Iter=          11  ERRK=  4.248534971829324E-003
+ Kutta Condition Iter=          12  ERRK=  5.349485816308706E-003
+ Kutta Condition Iter=          13  ERRK=  6.497304065741550E-003
+ Kutta Condition Iter=          14  ERRK=  4.692924730505005E-003
+ Kutta Condition Iter=          15  ERRK=  9.227942919793560E-003
+ Kutta Condition Iter=          16  ERRK=  4.275185270834665E-003
+ Kutta Condition Iter=          17  ERRK=  4.878794312660157E-003
+ Kutta Condition Iter=          18  ERRK=  9.423926236652166E-003
+ Kutta Condition Iter=          19  ERRK=  4.290197817194565E-003
+ Kutta Condition Iter=          20  ERRK=  4.792306885795523E-003
+ KTP=  8.013526081085179E-002  KQP=  1.435992479527318E-002
+ KTH=  8.085719685033137E-004  KQH=  4.677404882164719E-007
+ 
+ Operation time =   4. minutes
