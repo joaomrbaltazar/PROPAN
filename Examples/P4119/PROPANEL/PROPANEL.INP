@@ -11,10 +11,10 @@ RPH        = 0.2
 RMAX       = 1.0
 
 ISC        = 0
-ALPHAH     = 0.
-ALPHAT     = 0.
-ALPHALE    = 0.
-ALPHATE    = 0.
+ALPHAH     = 20.
+ALPHAT     = 20.
+ALPHALE    = 10.
+ALPHATE    = 10.
 ISTRIP     = 0
 
 ANGPITCH   = 0.
@@ -36,7 +36,7 @@ PTWI       = 1.10500 , 1.10370 , 1.10220 , 1.09830 , 1.09320 , 1.08790 , 1.08390
 INTERPW    = 1
 
 JI         = 1
-JF         = 40
+JF         = 35
 
 ITYPEPW    = 8
 ST1PW      = 0.
@@ -61,7 +61,7 @@ INTECORR   = 0
 XI         = 0.
 XF         = 0.
 
-NPW        = 270
+NPW        = 160
 NRW        = 40
 !--------------------------------------------------------------------------------------------------------------------!
 IDENTH     = 'Hub'
