@@ -58,12 +58,12 @@ ifort -c -fltconsistency -fpe0 Solve/SolveWake.f90
 # WakeAlign Folder
 ifort -c -fltconsistency -fpe0 WakeAlign/wakealign1.f90
 ifort -c -fltconsistency -fpe0 WakeAlign/nozzledef.f90
+ifort -c -fltconsistency -fpe0 WakeAlign/geoduct37.f90
 ifort -c -fltconsistency -fpe0 WakeAlign/bladewakedisp.f90
 ifort -c -fltconsistency -fpe0 WakeAlign/nozzledisp.f90
 ifort -c -fltconsistency -fpe0 WakeAlign/nozzlewakedisp.f90
+ifort -c -fltconsistency -fpe0 WakeAlign/ff.f90
 cp WakeAlign/wakealign2.o .
-cp WakeAlign/geoduct37.o .
-cp WakeAlign/ff.o .
 # Cav Folder
 ifort -c -fltconsistency -fpe0 Cav/cavcheck.f90
 ifort -c -fltconsistency -fpe0 Cav/cavprop.f90
@@ -91,16 +91,16 @@ ifort -c -fltconsistency -fpe0 Grids/hubgrid.f90
 ifort -c -fltconsistency -fpe0 Grids/nozzlegrid.f90
 ifort -c -fltconsistency -fpe0 Grids/nozzlewakegrid.f90
 # Grape Folder
-cp Grids/Grape/angri.o .
-cp Grids/Grape/bord.o .
-cp Grids/Grape/calcb.o .
-cp Grids/Grape/calphi.o .
-cp Grids/Grape/coef.o .
-cp Grids/Grape/grape.o .
-cp Grids/Grape/guessa.o .
-cp Grids/Grape/rhs.o .
-cp Grids/Grape/sip.o .
-cp Grids/Grape/splin.o .
+ifort -c -fltconsistency -fpe0 Grids/Grape/angri.f90
+ifort -c -fltconsistency -fpe0 Grids/Grape/bord.f90
+ifort -c -fltconsistency -fpe0 Grids/Grape/calcb.f90
+ifort -c -fltconsistency -fpe0 Grids/Grape/calphi.f90
+ifort -c -fltconsistency -fpe0 Grids/Grape/coef.f90
+ifort -c -fltconsistency -fpe0 Grids/Grape/grape.f90
+ifort -c -fltconsistency -fpe0 Grids/Grape/guessa.f90
+ifort -c -fltconsistency -fpe0 Grids/Grape/rhs.f90
+ifort -c -fltconsistency -fpe0 Grids/Grape/sip.f90
+ifort -c -fltconsistency -fpe0 Grids/Grape/splin.f90
 # Field Folder
 ifort -c -fltconsistency -fpe0 Field/bladecoeff.f90
 ifort -c -fltconsistency -fpe0 Field/bladewakecoeff.f90
@@ -117,7 +117,10 @@ ifort -c -fltconsistency -fpe0 Calc/JacobianCav.f90
 ifort -c -fltconsistency -fpe0 Calc/linint.f90
 ifort -c -fltconsistency -fpe0 Calc/intk1.f90
 ifort -c -fltconsistency -fpe0 Calc/splint.f90
+ifort -c -fltconsistency -fpe0 Calc/spline.f90
+ifort -c -fltconsistency -fpe0 Calc/ispline.f90
 ifort -c -fltconsistency -fpe0 Calc/gaussint.f90
+ifort -c -fltconsistency -fpe0 Calc/bisof.f
 ifort -c -fltconsistency -fpe0 Calc/CtCq.f90
 ifort -c -fltconsistency -fpe0 Calc/gaperrg.f90
 ifort -c -fltconsistency -fpe0 Calc/periodicflow.f90
@@ -127,9 +130,6 @@ ifort -c -fltconsistency -fpe0 Calc/sxx.f90
 ifort -c -fltconsistency -fpe0 Calc/shxx.f90
 ifort -c -fltconsistency -fpe0 Calc/sdiv.f90
 ifort -c -fltconsistency -fpe0 Calc/frame.f90
-cp Calc/spline.o .
-cp Calc/ispline.o .
-cp Calc/bisof.o .
 # Linpack Folder
 ifort -c -fltconsistency -fpe0 Linpack/cubspl.f
 ifort -c -fltconsistency -fpe0 Linpack/daxpy.f
