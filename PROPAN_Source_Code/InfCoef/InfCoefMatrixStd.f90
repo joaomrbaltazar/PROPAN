@@ -22,6 +22,7 @@ SUBROUTINE INFCOEFMATRIXSTD
 !    Modified  : 06032015, J. Baltazar, revised                                                 !
 !    Modified  : 03062016, J. Baltazar, 2016 version 1.3                                        !
 !    Modified  : 24102016, J. Baltazar, 2016 version 1.4                                        !
+!    Modified  : 20082025, J. Baltazar, 2025 version 1.0                                        !
 !-----------------------------------------------------------------------------------------------!
 USE PROPAN_MOD
 IMPLICIT NONE
@@ -30,7 +31,7 @@ INTEGER :: I,J,K,L,KB,INFO,JP,JS
 SIJ= SIJ/(2.D0*PI)
 DIJ=-DIJ/(2.D0*PI)
 WIJ= WIJ/(2.D0*PI)
-KIJ= KIJ/(2.D0*PI)
+IF (NT > 0) KIJ= KIJ/(2.D0*PI)
 !-----------------------------------------------------------------------------------------------!
 DO I=1,NHPAN+NPPAN+NNPAN
    DIJ(I,I,1)=1.D0+DIJ(I,I,1)
