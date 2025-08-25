@@ -1,0 +1,73 @@
+ 
+ PROPAN2022 v1.0
+ 
+ Spanwise number of panels on the blade NRP=          21
+ Chordwise number of panels on the blade NCP=          40
+ Number of panels on the blade NPPAN=         840
+ 
+ Spanwise number of panels on the blade wake NRW=          21
+ Streamwise number of panels on the blade wake NPW=         350
+ Number of panels on the blade wake NPWPAN=        7350
+ 
+ Circumferential number of panels on nozzle sector NNTP=          30
+ Chordwise number of panels on the nozzle NNXT1=         160
+ Number of panels on nozzle sector NNPAN=        4800
+ 
+ Circumferential number of panels on nozzle wake sector NNTP=          30
+ Streamwise number of panels on the nozzle wake NNW=         310
+ Number of panels on nozzle wake sector NNWPAN=        9300
+ 
+ Circumferential number of panels on hub sector NHTP=          16
+ Axial number of panels on the hub NHX=          69
+ Number of panels on hub sector NHPAN=        1104
+ 
+ Total number of body panels NPAN=        6744
+ Total number of wake panels NWPAN=       16650
+ 
+   J=  0.405000000000000     
+ 
+ T=           0
+ Wake Align Iter=           0
+ Kutta Condition Iter=           1  ERRK=  2.522739266590746E-003
+ Kutta Condition Iter=           2  ERRK=  1.084976662446557E-004
+ Gap Model Iter=           0  ERRG=   1.51301282396875     
+ KTP=  0.228774583422324       KQP=  4.042148877611811E-002
+ KTN=  0.107301777728105       KQN= -1.147339352716680E-007
+ KTH=  8.884799262112811E-003  KQH=  1.638674112091488E-006
+ Wake Align Iter=           1
+ Kutta Condition Iter=           1  ERRK=  1.677176386887691E-003
+ Kutta Condition Iter=           2  ERRK=  3.587656097303604E-005
+ Gap Model Iter=           0  ERRG=   1.05309023134976     
+ KTP=  0.154896907380600       KQP=  2.878273253520058E-002
+ KTN=  0.105781329871669       KQN= -3.394061112897793E-007
+ KTH=  6.181547662707692E-003  KQH=  2.523476297820658E-005
+ Wake Align Iter=           2
+ Kutta Condition Iter=           1  ERRK=  1.391647693426146E-003
+ Kutta Condition Iter=           2  ERRK=  2.586473973886783E-005
+ Gap Model Iter=           0  ERRG=   1.38149717366431     
+ KTP=  0.186648714140577       KQP=  3.386031399174411E-002
+ KTN=  0.105955481531765       KQN= -3.335546777421022E-007
+ KTH=  7.441578263777762E-003  KQH=  2.638507228481756E-005
+ Wake Align Iter=           3
+ Kutta Condition Iter=           1  ERRK=  1.517727498070109E-003
+ Kutta Condition Iter=           2  ERRK=  3.808125513460325E-005
+ Gap Model Iter=           0  ERRG=   1.25818788139458     
+ KTP=  0.174449977107461       KQP=  3.192298597071945E-002
+ KTN=  0.105152875754954       KQN= -3.357722167307476E-007
+ KTH=  7.097376510944995E-003  KQH=  2.468580808234159E-005
+ Wake Align Iter=           4
+ Kutta Condition Iter=           1  ERRK=  1.506977678506938E-003
+ Kutta Condition Iter=           2  ERRK=  3.006566117302878E-005
+ Gap Model Iter=           0  ERRG=   1.29519714642058     
+ KTP=  0.178417389477768       KQP=  3.254917518954636E-002
+ KTN=  0.105772664601536       KQN= -3.354698384821177E-007
+ KTH=  7.274620175206345E-003  KQH=  2.451214858681920E-005
+ Wake Align Iter=           5
+ Kutta Condition Iter=           1  ERRK=  1.424321630813186E-003
+ Kutta Condition Iter=           2  ERRK=  2.999728665009638E-005
+ Gap Model Iter=           0  ERRG=   1.28161605595824     
+ KTP=  0.176784371513481       KQP=  3.230033183801558E-002
+ KTN=  0.105601747355178       KQN= -3.354743008490389E-007
+ KTH=  7.057253643163477E-003  KQH=  2.605875761721812E-005
+ 
+ Operation time =   2. hours
