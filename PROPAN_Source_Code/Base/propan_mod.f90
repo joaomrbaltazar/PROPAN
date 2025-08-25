@@ -33,6 +33,7 @@ MODULE PROPAN_MOD
 !    Modified  : 04012018, J. Baltazar, 2018 version 1.0, Gap strip alignment                   !
 !    Modified  : 02102018, J. Baltazar, 2018 version 1.1, Duct Kutta points at inner and outer  !
 !    Modified  : 23062020, J. Baltazar, 2020 version 1.2, Dynamic inflow                        !
+!    Modified  : 20082025, J. Baltazar, 2025 version 1.0, new working variables                 !
 !-----------------------------------------------------------------------------------------------!
 IMPLICIT NONE
 DOUBLE PRECISION :: PI,TOL,FARTOL1,FARTOL2
@@ -286,7 +287,7 @@ INTEGER,ALLOCATABLE,DIMENSION(:)              :: IPVTC1,IPVTC2,IPVTC4
 !    Temporary Working Variables                                                                !
 !-----------------------------------------------------------------------------------------------!
 DOUBLE PRECISION                              :: WORK1,WORK2,WORK3
-DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:)     :: WORKA1,WORKA2,WORKA3
+DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:)     :: WORKA1,WORKA2,WORKA3,WORKA4
 DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:,:)   :: WORKM1,WORKM2
 !-----------------------------------------------------------------------------------------------!
 END MODULE PROPAN_MOD
