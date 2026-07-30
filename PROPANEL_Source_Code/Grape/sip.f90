@@ -1,16 +1,30 @@
 !-----------------------------------------------------------------------------------------------!
 SUBROUTINE SIP(R,SLC,ALFA,LBOUN,NX,NY,ITMAX,ILIM,IOUT) 
 !-----------------------------------------------------------------------------------------------!
+!    Created by   : L. Eca, IST                                                                 !
+!    Last Revision: Joao Baltazar, IST, December 2025                                           !
+!-----------------------------------------------------------------------------------------------!
 IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 !-----------------------------------------------------------------------------------------------!
-PARAMETER(NDIM=300)
+EXTERNAL :: RHS,CALCB
+INTEGER :: I,IM1,IP1,J,JM1,JP1,ILIM,IT,IR,IL,IOUT,ITMAX,ICONV,IRHS,NX,NXM1,NY,NYM1,LBOUN(4)
+INTEGER,PARAMETER :: NDIM=300
+DOUBLE PRECISION  :: ONE,ALFA,R(12),DIFOLD
+DOUBLE PRECISION  :: DXDKS,DYDKS,DXDET,DYDET,G11,G12,G22,ARXI,ARETA,AXI,AETA,CFXI,CFETA
+DOUBLE PRECISION  :: QJI,PPJI,SJI,RJI,TJI,ZZXJI,ZZYJI,R0XJI,R0YJI,RESX,RESY
+DOUBLE PRECISION  :: SLC,QINV,DIV,ACX,ACY
+DOUBLE PRECISION  :: AP(NDIM,NDIM),AR(NDIM,NDIM),B(NDIM,NDIM)
+DOUBLE PRECISION  :: CX(NDIM,NDIM),CY(NDIM,NDIM)
+! Types for COMMON blocks
+DOUBLE PRECISION :: X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+DOUBLE PRECISION :: RXI(NDIM,NDIM), RETA(NDIM,NDIM)
 !-----------------------------------------------------------------------------------------------!
-COMMON /COOR/ X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
-COMMON /FORCE/ RXI(NDIM,NDIM), RETA(NDIM,NDIM)
+COMMON /COOR/ X,Y !X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+COMMON /FORCE/ RXI,RETA !RXI(NDIM,NDIM),RETA(NDIM,NDIM)
 !-----------------------------------------------------------------------------------------------!
-DIMENSION R(12),LBOUN(4)
-DIMENSION AP(NDIM,NDIM),AR(NDIM,NDIM),B(NDIM,NDIM)
-DIMENSION CX(NDIM,NDIM),CY(NDIM,NDIM)
+!DIMENSION R(12),LBOUN(4)
+!DIMENSION AP(NDIM,NDIM),AR(NDIM,NDIM),B(NDIM,NDIM)
+!DIMENSION CX(NDIM,NDIM),CY(NDIM,NDIM)
 !-----------------------------------------------------------------------------------------------!
 ONE=1.D0
 NXM1=NX-1
@@ -39,7 +53,7 @@ END DO !J=1,NY,NYM1
 !!WRITE(6,1000)
 !-----------------------------------------------------------------------------------------------!
 IF (ILIM >= 0) CALL RHS(R(12),ALFA,LBOUN,NX,NY,0)
-DIFOLD=10000
+DIFOLD=10000.D0
 IRHS=0
 !-----------------------------------------------------------------------------------------------!
 DO IT=1,ITMAX
@@ -151,8 +165,9 @@ DO IT=1,ITMAX
 !-----------------------------------------------------------------------------------------------!
    ICONV=0
    IF ((IRHS == 0).AND.(R(4) < R(1)).AND.(R(5) < R(2))) ICONV=1
-!! IF ((IOUT /= 0).OR.(IT == 1).OR.(IT == ITMAX).OR.(ICONV == 1)) &
-!!                                                              WRITE(6,1100) IT,(R(IR),IR=4,12)
+   IF ((IOUT /= 0).OR.(IT == 1).OR.(IT == ITMAX).OR.(ICONV == 1)) THEN
+      !!WRITE(6,1100) IT,(R(IR),IR=4,12)
+   END IF !((IOUT /= 0).OR.(IT == 1).OR.(IT == ITMAX).OR.(ICONV == 1))
    IF(ICONV.EQ.1) GOTO 160
 !-----------------------------------------------------------------------------------------------!
    DIFOLD=R(4)*R(5)

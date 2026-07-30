@@ -1,13 +1,25 @@
 !-----------------------------------------------------------------------------------------------!
 SUBROUTINE ANGRI(NX,NY,IDIST)
 !-----------------------------------------------------------------------------------------------!
-IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+!    Created by   : L. Eca, IST                                                                 !
+!    Last Revision: Joao Baltazar, IST, December 2025                                           !
 !-----------------------------------------------------------------------------------------------!
-PARAMETER(NDIM=300)
+IMPLICIT NONE !DOUBLE PRECISION (A-H,O-Z)
 !-----------------------------------------------------------------------------------------------!
-COMMON /COOR/  X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
-COMMON /AREA/  DSI(NDIM,4),DST(4),IDSIT(4),IAK(2),JAK(2)
-COMMON /TRANS/ FXI(NDIM,NDIM),FETA(NDIM,NDIM)
+INTEGER :: I,IM1,IP1,J,JM1,JP1
+INTEGER :: I12M,J12M,NX,NXM1,NY,NYM1,IDIST
+INTEGER,PARAMETER :: NDIM=300
+DOUBLE PRECISION  :: UM,PI,CRG,ZERO
+DOUBLE PRECISION  :: A12T,A12M,DXDKS,DYDKS,DXDET,DYDET,G12,RG11,RG22,SG
+DOUBLE PRECISION  :: DSI1,DSI2,DSI3,DSI4,DSM1,DSM2,DSM3,DSM4,DSL1,DSL2,DSL3,DSL4
+! Types for COMMON blocks
+DOUBLE PRECISION :: X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+DOUBLE PRECISION :: DSI(NDIM,4),DST(4),FXI(NDIM,NDIM),FETA(NDIM,NDIM)
+INTEGER          :: IDSIT(4),IAK(2),JAK(2)
+!-----------------------------------------------------------------------------------------------!
+COMMON /COOR/  X,Y !X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+COMMON /AREA/  DSI,DST,IDSIT,IAK,JAK !DSI(NDIM,4),DST(4),IDSIT(4),IAK(2),JAK(2)
+COMMON /TRANS/ FXI,FETA !FXI(NDIM,NDIM),FETA(NDIM,NDIM)
 !-----------------------------------------------------------------------------------------------!
 UM=1.D0
 PI=4.D0*DATAN(UM)
@@ -71,6 +83,8 @@ NYM1=NY-1
 !-----------------------------------------------------------------------------------------------!
 DSM1=0.D0
 DSM3=0.D0
+DSI1=1000.D0
+DSI3=1000.D0
 DO I=2,NXM1
    DSL1=DSQRT((X( 2,I)-X(   1,I))**2+(Y( 2,I)-Y(   1,I))**2)
    IF (DSI(I,1) >= 1.D-10) DSL1=DSL1/DSI(I,1)

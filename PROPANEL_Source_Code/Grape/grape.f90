@@ -64,21 +64,32 @@ SUBROUTINE GRAPE(NX,NY,XXG,YYG,ITMAX)
 !            JSP    -> ETA LINE SKIP FOR PLOTTING                                               !
 !            BDFILE -> NAME OF THE INPUT FILE OF THE COORDINATES OF THE BOUNDARY NODES          !
 !-----------------------------------------------------------------------------------------------!
-IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+!    Created by   : L. Eca, IST                                                                 !
+!    Last Revision: Joao Baltazar, IST, December 2025                                           !
 !-----------------------------------------------------------------------------------------------!
-PARAMETER(NDIM=300)
+IMPLICIT NONE !DOUBLE PRECISION (A-H,O-Z)
 !-----------------------------------------------------------------------------------------------!
+EXTERNAL :: SPLIN,GUESSA,SIP,BORD,ANGRI
+INTEGER,PARAMETER :: NDIM=300
 CHARACTER *40 IDGEOM
-INTEGER :: I,J,NX,NY,LBOUN(4)
+INTEGER :: I,J,NX,NY,LBOUN(4),ITYPE,IOUT,IPLOT,IPLAN,IPLI,IPLF,ISP,JPLI,JPLF,JSP,ILIM,ITMAX,LT
+DOUBLE PRECISION :: XLOC,SLC,ALFA
 DOUBLE PRECISION :: XXG(NX,NY),YYG(NX,NY),R(12)
+! Types for COMMON blocks
+DOUBLE PRECISION :: X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+DOUBLE PRECISION :: RXI(NDIM,NDIM), RETA(NDIM,NDIM)
+DOUBLE PRECISION :: FXI(NDIM,NDIM),FETA(NDIM,NDIM)
+DOUBLE PRECISION :: DSI(NDIM,4),DST(4)
+INTEGER          :: IDSIT(4),IAK(2),JAK(2)
+DOUBLE PRECISION :: XL(NDIM,4),YL(NDIM,4),DXDL(NDIM,4),DYDL(NDIM,4),RL(NDIM,4)
 !-----------------------------------------------------------------------------------------------!
-COMMON /COOR/  X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
-COMMON /FORCE/ RXI(NDIM,NDIM), RETA(NDIM,NDIM)
-COMMON /TRANS/ FXI(NDIM,NDIM),FETA(NDIM,NDIM)
-COMMON /AREA/  DSI(NDIM,4),DST(4),IDSIT(4),IAK(2),JAK(2)
-COMMON /BOUN/  XL(NDIM,4),YL(NDIM,4),DXDL(NDIM,4),DYDL(NDIM,4),RL(NDIM,4)
+COMMON /COOR/  X,Y !X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+COMMON /FORCE/ RXI,RETA !RXI(NDIM,NDIM), RETA(NDIM,NDIM)
+COMMON /TRANS/ FXI,FETA !FXI(NDIM,NDIM),FETA(NDIM,NDIM)
+COMMON /AREA/  DSI,DST,IDSIT,IAK,JAK !DSI(NDIM,4),DST(4),IDSIT(4),IAK(2),JAK(2)
+COMMON /BOUN/  XL,YL,DXDL,DYDL,RL !XL(NDIM,4),YL(NDIM,4),DXDL(NDIM,4),DYDL(NDIM,4),RL(NDIM,4)
 !-----------------------------------------------------------------------------------------------!
-DIMENSION DS(8*NDIM),RIS(8*NDIM),DSG(NDIM)
+!DIMENSION DS(8*NDIM),RIS(8*NDIM),DSG(NDIM)
 !-----------------------------------------------------------------------------------------------!
 DATA LBOUN/4*0/ 
 !-----------------------------------------------------------------------------------------------!

@@ -2,16 +2,24 @@
 SUBROUTINE CALCB(IL,IT,NX,NY)
 !-----------------------------------------------------------------------------------------------!
 !    Created by   : L. Eca, IST                                                                 !
-!    Last Revision: Joao Baltazar, IST, April 2005                                              !
+!    Last Revision: Joao Baltazar, IST, December 2025                                           !
 !-----------------------------------------------------------------------------------------------!
-IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+IMPLICIT NONE !DOUBLE PRECISION (A-H,O-Z)
 !-----------------------------------------------------------------------------------------------!
-PARAMETER(NDIM=300)
+EXTERNAL :: CALPHI
+INTEGER,PARAMETER :: NDIM=300
+INTEGER :: I,IL,IT,NIT,KL,KL1,J,JL,JL1
+INTEGER :: NX,NXM1,NXM2,NY,NYM1,NYM2
+DOUBLE PRECISION :: DXL,DYL,RL0,RL1,PHI(4),DPH(4),D2P(4),XLOC,YLOC
+DOUBLE PRECISION :: DXDKS,DYDKS,D2XKS,D2YKS,DXDET,DYDET,FLOC,DFLOC,D2XET,D2YET
+! Types for COMMON blocks
+DOUBLE PRECISION :: X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+DOUBLE PRECISION :: XL(NDIM,4),YL(NDIM,4),DXDL(NDIM,4),DYDL(NDIM,4),RL(NDIM,4)
 !-----------------------------------------------------------------------------------------------!
-COMMON /COOR/  X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
-COMMON /BOUN/  XL(NDIM,4),YL(NDIM,4),DXDL(NDIM,4),DYDL(NDIM,4),RL(NDIM,4)
+COMMON /COOR/  X,Y !X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+COMMON /BOUN/  XL,YL,DXDL,DYDL,RL !XL(NDIM,4),YL(NDIM,4),DXDL(NDIM,4),DYDL(NDIM,4),RL(NDIM,4)
 !-----------------------------------------------------------------------------------------------!
-DIMENSION PHI(4),DPH(4),D2P(4)
+!DIMENSION PHI(4),DPH(4),D2P(4)
 !-----------------------------------------------------------------------------------------------!
 NXM1=NX-1
 NYM1=NY-1

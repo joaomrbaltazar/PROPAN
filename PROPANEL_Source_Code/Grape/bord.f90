@@ -2,13 +2,18 @@
 SUBROUTINE BORD(NX,NY)
 !-----------------------------------------------------------------------------------------------!
 !    Created by   : L. Eca, IST                                                                 !
-!    Last Revision: Joao Baltazar, IST, April 2005                                              !
+!    Last Revision: Joao Baltazar, IST, December 2025                                           !
 !-----------------------------------------------------------------------------------------------!
-IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+IMPLICIT NONE !DOUBLE PRECISION (A-H,O-Z)
 !-----------------------------------------------------------------------------------------------!
-PARAMETER(NDIM=300)
+INTEGER,PARAMETER :: NDIM=300
+INTEGER :: I,IM1,IP1,J,JM1,JP1
+INTEGER :: NX,NXM1,NXP1,NY,NYM1,NYP1
+DOUBLE PRECISION :: ZERO,DXDKS,DYDKS,DSDKS,DXDET,DYDET,DSDET,FH
+! Types for COMMON blocks
+DOUBLE PRECISION :: X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
 !-----------------------------------------------------------------------------------------------!
-COMMON /COOR/ X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+COMMON /COOR/ X,Y !X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
 !-----------------------------------------------------------------------------------------------!
 NXP1=NX+1
 NYP1=NY+1

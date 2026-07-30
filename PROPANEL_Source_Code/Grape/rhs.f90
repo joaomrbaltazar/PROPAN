@@ -1,19 +1,36 @@
 !-----------------------------------------------------------------------------------------------!
 SUBROUTINE RHS(RXF,ALFA,LBOUN,NX,NY,ITER)
 !-----------------------------------------------------------------------------------------------!
-IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+!    Created by   : L. Eca, IST                                                                 !
+!    Last Revision: Joao Baltazar, IST, December 2025                                           !
 !-----------------------------------------------------------------------------------------------!
-PARAMETER(NDIM=300)
+IMPLICIT NONE !DOUBLE PRECISION (A-H,O-Z)
 !-----------------------------------------------------------------------------------------------!
-COMMON /COOR/ X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
-COMMON /FORCE/ RXI(NDIM,NDIM), RETA(NDIM,NDIM)
-COMMON /TRANS/ FXI(NDIM,NDIM),FETA(NDIM,NDIM)
-COMMON /AREA/  DSI(NDIM,4),DST(4),IDSIT(4),IAK(2),JAK(2)
+INTEGER :: I,IM1,IP1,J,JM1,JP1,ITER,ILOW,JLOW,ITOP,JTOP,NX,NXM1,NY,NYM1,LBOUN(4)
+INTEGER,PARAMETER :: NDIM=300
+DOUBLE PRECISION  :: ZERO,RXF
+DOUBLE PRECISION  :: DXDKS(NDIM,4),DYDKS(NDIM,4),DXDET(NDIM,4),DYDET(NDIM,4)
+DOUBLE PRECISION  :: D2XKS,D2YKS,D2XET,D2YET,FH,FAXI,FBXI,FAETA,FBETA
+DOUBLE PRECISION  :: ACC1,ACC2,ALFA,FX1,FX2,FILOW,FITOP,FJLOW,FJTOP,FY1,FY2
+DOUBLE PRECISION  :: RADX1,RADY1,RADX2,RADY2,RADX3,RADY3,RADX4,RADY4,RNEWX,RNEWY
+DOUBLE PRECISION  :: RXIL(NDIM,NDIM),RETAL(NDIM,NDIM)
+DOUBLE PRECISION  :: G11(NDIM,NDIM),G22(NDIM,NDIM) 
+! Types for COMMON blocks
+DOUBLE PRECISION :: X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+DOUBLE PRECISION :: RXI(NDIM,NDIM), RETA(NDIM,NDIM)
+DOUBLE PRECISION :: FXI(NDIM,NDIM),FETA(NDIM,NDIM)
+DOUBLE PRECISION :: DSI(NDIM,4),DST(4)
+INTEGER          :: IDSIT(4),IAK(2),JAK(2)
 !-----------------------------------------------------------------------------------------------!
-DIMENSION LBOUN(4)
-DIMENSION G11(NDIM,NDIM),G22(NDIM,NDIM)
-DIMENSION RXIL(NDIM,NDIM),RETAL(NDIM,NDIM)
-DIMENSION DXDKS(NDIM,4),DYDKS(NDIM,4),DXDET(NDIM,4),DYDET(NDIM,4)
+COMMON /COOR/ X,Y !X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+COMMON /FORCE/ RXI,RETA !RXI(NDIM,NDIM), RETA(NDIM,NDIM)
+COMMON /TRANS/ FXI,FETA !FXI(NDIM,NDIM),FETA(NDIM,NDIM)
+COMMON /AREA/  DSI,DST,IDSIT,IAK,JAK !DSI(NDIM,4),DST(4),IDSIT(4),IAK(2),JAK(2)
+!-----------------------------------------------------------------------------------------------!
+!DIMENSION LBOUN(4)
+!DIMENSION G11(NDIM,NDIM),G22(NDIM,NDIM)
+!DIMENSION RXIL(NDIM,NDIM),RETAL(NDIM,NDIM)
+!DIMENSION DXDKS(NDIM,4),DYDKS(NDIM,4),DXDET(NDIM,4),DYDET(NDIM,4)
 !-----------------------------------------------------------------------------------------------!
 SAVE DXDKS,DYDKS,DXDET,DYDET,G11,G22,RXIL,RETAL
 !-----------------------------------------------------------------------------------------------!

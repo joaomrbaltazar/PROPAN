@@ -1,15 +1,27 @@
 !-----------------------------------------------------------------------------------------------!
 SUBROUTINE GUESSA(NX,NY,ITYPE)  
 !-----------------------------------------------------------------------------------------------!
+!    Created by   : L. Eca, IST                                                                 !
+!    Last Revision: Joao Baltazar, IST, December 2025                                           !
+!-----------------------------------------------------------------------------------------------!
 !    Initial Guess                                                                              !
 !-----------------------------------------------------------------------------------------------!
-IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+IMPLICIT NONE !DOUBLE PRECISION (A-H,O-Z)
 !-----------------------------------------------------------------------------------------------!
-PARAMETER(NDIM=300)
+EXTERNAL :: ANGRI,BORD
+INTEGER,PARAMETER :: NDIM=300
+INTEGER :: I,J,IM1,JM1,NX,NXM1,NY,NYM1,ITYPE
+DOUBLE PRECISION :: DIVI,DIVJ,ZERO,RI,RIM1,RJ,RJM1,X0,Y0,XE,YE,AX,AY,AXY,DAXY,DSQ2,DSXY
+DOUBLE PRECISION :: XI,ETA,FAXI,FAETA,FBXI,FBETA,PHIA,PHIB,PHIC,PHID
+! Types for COMMON blocks
+DOUBLE PRECISION :: X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+DOUBLE PRECISION :: DSI(NDIM,4),DST(4)
+INTEGER          :: IDSIT(4),IAK(2),JAK(2)
+DOUBLE PRECISION :: FXI(NDIM,NDIM),FETA(NDIM,NDIM)
 !-----------------------------------------------------------------------------------------------!
-COMMON /COOR/  X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
-COMMON /AREA/  DSI(NDIM,4),DST(4),IDSIT(4),IAK(2),JAK(2)
-COMMON /TRANS/ FXI(NDIM,NDIM),FETA(NDIM,NDIM)
+COMMON /COOR/  X,Y !X(0:NDIM+1,0:NDIM+1),Y(0:NDIM+1,0:NDIM+1)
+COMMON /AREA/  DSI,DST,IDSIT,IAK,JAK !DSI(NDIM,4),DST(4),IDSIT(4),IAK(2),JAK(2)
+COMMON /TRANS/ FXI,FETA !FXI(NDIM,NDIM),FETA(NDIM,NDIM)
 !-----------------------------------------------------------------------------------------------!
 NXM1=NX-1
 NYM1=NY-1
@@ -24,7 +36,7 @@ FETA(1 ,NX)=0.0
 FXI ( 1,1 )=0.0
 FXI (NY,1 )=0.0
 !-----------------------------------------------------------------------------------------------!
-!    Eta Direction																	                                            !
+!    Eta Direction																	            !
 !-----------------------------------------------------------------------------------------------!
 DO J=2,NY
    JM1=J-1
@@ -121,7 +133,7 @@ END DO !I=2,NXM1
 !-----------------------------------------------------------------------------------------------!
 !    Calculation of Distances at the Boundary                                                   !
 !-----------------------------------------------------------------------------------------------!
-!    Distances at the Corners														                                        !
+!    Distances at the Corners														            !
 !-----------------------------------------------------------------------------------------------!
 IF (IDSIT(1) == 0) THEN
    DSI( 1,1)=DSQRT((X(2, 1)-X(1, 1))**2+(Y(2, 1)-Y(1, 1))**2)
@@ -166,7 +178,7 @@ END DO !J=2,NYM1
 IF (ITYPE < 0) RETURN
 !-----------------------------------------------------------------------------------------------!
 !    Initial Grid                                                                               !
-!																					                                                      !
+!																					            !
 !    ITYPE=0 or ITYPE<0 or ITYPE>1 --> Transfinite Interpolation                                !
 !-----------------------------------------------------------------------------------------------!
 IF ((ITYPE == 0).OR.(ITYPE >= 4)) THEN
