@@ -1,5 +1,5 @@
 # PROPAN - Potential Flow Code for Foils and Rotors
-PROPAN is short for Propeller Panel Method. PROPAN is a panel code for the calculation of steady and unsteady potential flow around foils, open and ducted propellers, and wind and marine current turbines. PROPAN was developed by MARETEC (Marine and Environmental Technology Research Centre) at Instituto Superior Técnico (IST) which belongs to Lisbon University.
+PROPAN is short for Propeller Panel Method. PROPAN is a panel code for the calculation of steady and unsteady potential flow around foils, open and ducted propellers, wind and marine current turbines, and helicopter rotors. PROPAN was developed by MARETEC (Marine and Environmental Technology Research Centre) at Instituto Superior Técnico (IST) which belongs to Lisbon University.
 # What is this repository?
 This is the PROPAN Potential Flow Code OFFICIAL repository.
 # Overview
@@ -39,6 +39,10 @@ Wind Turbines:
 * steady and unsteady flows
 * empirical rigid wake model
 * dynamic inflow
+
+Helicopter Rotors:
+* steady and unsteady flows
+* empirical rigid wake model (Landgrebe) and wake alignment model
 
 Output: solution output in ASCII text files with Tecplot format
 
