@@ -1,18 +1,4 @@
 !-----------------------------------------------------------------------------------------------!
-!    Nozzle geometrical definition                                                              !
-!    Copyright (C) 2021  J. Baltazar                                                            !
-!                                                                                               !
-!    This program is free software: you can redistribute it and/or modify it under the terms of !
-!    the GNU Affero General Public License as published by the Free Software Foundation, either !
-!    version 3 of the License, or (at your option) any later version.                           !
-!                                                                                               !
-!    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;  !
-!    without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  !
-!    See the GNU Affero General Public License for more details.                                !
-!                                                                                               !
-!    You should have received a copy of the GNU Affero General Public License                   !
-!    along with this program.  If not, see <https://www.gnu.org/licenses/>.                     !
-!-----------------------------------------------------------------------------------------------!
 SUBROUTINE NOZZLEDEF(SIDE,XL,RL)
 !-----------------------------------------------------------------------------------------------!
 !    Created by:  J. Baltazar, IST, November 2010                                               !
@@ -21,13 +7,16 @@ SUBROUTINE NOZZLEDEF(SIDE,XL,RL)
 !    Modified  : 02122014, J. Baltazar, 2014 version 1.2                                        !
 !    Modified  : 05072017, J. Baltazar, 2017 version 1.0                                        !
 !    Modified  : 14082025, J. Baltazar, 2025 version 1.0                                        !
+!    Modified  : 25122025, J. Baltazar, 2025 version 1.2a                                       !
 !-----------------------------------------------------------------------------------------------!
 USE PROPANEL_MOD
 IMPLICIT NONE
+EXTERNAL :: LININT,INTK1,SPLINT,GEODUCT37
 CHARACTER*5 SIDE
 INTEGER :: I,LIDENTN
 DOUBLE PRECISION :: XL,XD,RL,TN0,FN0
 DOUBLE PRECISION :: TTETA,TETA,STETA,CTETA,SLE,RLE,STE,RTE
+DOUBLE PRECISION :: T37(1), Y37(1)
 DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:) :: TNN,FNN
 !-----------------------------------------------------------------------------------------------!
 I=1
@@ -107,7 +96,9 @@ IF (SIDE == 'INNER') THEN
            ((XD >= 0.30D0).AND.(XD <= 0.55D0))) THEN
       CALL LININT(NRNI,XIL,YIL,1,XD,RL)
    ELSEIF (IDENTN(1:LIDENTN) == '37') THEN
-      CALL GEODUCT37(2,1,XD,RL)
+      T37(1)=XD
+      CALL GEODUCT37(2,1,T37,Y37)
+      RL=Y37(1)
    ELSE !(XD)
       IF (INTERN == 0) THEN
          CALL LININT(NRNI,XIL,YIL,1,XD,RL)
@@ -145,7 +136,9 @@ IF (SIDE == 'OUTER') THEN
       END IF !(INTERN)
       RL=FN0+TN0
    ELSEIF (IDENTN(1:LIDENTN) == '37') THEN
-      CALL GEODUCT37(1,1,(1.D0-XD),RL)
+      T37(1)=1.D0-XD
+      CALL GEODUCT37(1,1,T37,Y37)
+      RL=Y37(1)
    ELSE !(XD)
       IF (INTERN == 0) THEN
          CALL LININT(NRNO,XOL,YOL,1,XD,RL)

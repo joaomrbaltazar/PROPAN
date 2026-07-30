@@ -1,17 +1,5 @@
 !-----------------------------------------------------------------------------------------------!
 !    Generate Blade Grid                                                                        !
-!    Copyright (C) 2021  J. Baltazar and J.A.C. Falcão de Campos                                !
-!                                                                                               !
-!    This program is free software: you can redistribute it and/or modify it under the terms of !
-!    the GNU Affero General Public License as published by the Free Software Foundation, either !
-!    version 3 of the License, or (at your option) any later version.                           !
-!                                                                                               !
-!    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;  !
-!    without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  !
-!    See the GNU Affero General Public License for more details.                                !
-!                                                                                               !
-!    You should have received a copy of the GNU Affero General Public License                   !
-!    along with this program.  If not, see <https://www.gnu.org/licenses/>.                     !
 !-----------------------------------------------------------------------------------------------!
 SUBROUTINE BLADEGRID
 !-----------------------------------------------------------------------------------------------!
@@ -23,20 +11,22 @@ SUBROUTINE BLADEGRID
 !    Modified  : 05072017, J. Baltazar, 2017 version 1.0                                        !
 !    Modified  : 05012018, J. Baltazar, 2018 version 1.0                                        !
 !    Modified  : 06042020, J. Baltazar, 2020 version 1.0                                        !
+!    Modified  : 25122025, J. Baltazar, 2025 version 1.2a                                       !
 !-----------------------------------------------------------------------------------------------!
 USE PROPANEL_MOD
 IMPLICIT NONE
+EXTERNAL :: LININT,INTK1,SPLINT,NOZZLEDEF
 INTEGER*4 :: I,IM1,J,K,IOERR
 INTEGER*4 :: LIDENT,NCI1
 DOUBLE PRECISION :: PHI,SPHI,CPHI,TK,X0,TTE,TLE,STE,FX
-DOUBLE PRECISION :: TTETA,TETA,STETA,CTETA,SLE,RLE,TC,XC,RR,LIDENTN,PITCH
+DOUBLE PRECISION :: TTETA,TETA,STETA,CTETA,SLE,RLE,TC,XC,RR !PITCH
 DOUBLE PRECISION :: CGAP,PTGAP,XRGAP,SKEWGAP
 DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:)   :: RI,CI,PTI,XRI,SKEWI,T0I,F0I
 DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:)   :: R,C,PT,XR,SKEW,T0,F0
 DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:)   :: S,SCN,SCII,TN0,TNF,TNN,FN0,FNN
 DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:,:) :: SCI,YBI,YFI,SC,SB,YB,SF,YF,YBN,YFN,SC1,YB1,YF1
 DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:,:) :: SBI,SFI,SBN,SFN,RROT,TROT
-DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:)   :: JUNK
+DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:)   :: TMP1,TMP2,JUNK
 !-----------------------------------------------------------------------------------------------!
 TK=2.5980762D0
 X0=1.D0
@@ -207,25 +197,47 @@ IF (IOERR == 0) THEN
 END IF !(IOERR == 0)
 !-----------------------------------------------------------------------------------------------!
 IF (IOERR < 0) THEN
+   ALLOCATE(TMP1(NRI),TMP2(NRP1))
+   TMP1=0.D0
+   TMP2=0.D0
    ALLOCATE(SC(NCI,NRP1),YB(NCI,NRP1),YF(NCI,NRP1))
    SC=0.D0
    YB=0.D0
    YF=0.D0
    DO I=1,NCI
       IF (INTERP == 0) THEN
-         CALL LININT(NRI,RI,SCI(I,:),NRP1,R,SC(I,:))
-         CALL LININT(NRI,RI,YBI(I,:),NRP1,R,YB(I,:))
-         CALL LININT(NRI,RI,YFI(I,:),NRP1,R,YF(I,:))
+         TMP1(:)=SCI(I,:)
+         CALL LININT(NRI,RI,TMP1,NRP1,R,TMP2)
+         SC(I,:)=TMP2(:)
+         TMP1(:)=YBI(I,:)
+         CALL LININT(NRI,RI,TMP1,NRP1,R,TMP2)
+         YB(I,:)=TMP2(:)
+         TMP1(:)=YFI(I,:)
+         CALL LININT(NRI,RI,TMP1,NRP1,R,TMP2)
+         YF(I,:)=TMP2(:)
       ELSEIF (INTERP == 1) THEN
-         CALL INTK1 (NRI,RI,SCI(I,:),NRP1,R,SC(I,:))
-         CALL INTK1 (NRI,RI,YBI(I,:),NRP1,R,YB(I,:))
-         CALL INTK1 (NRI,RI,YFI(I,:),NRP1,R,YF(I,:))
+         TMP1(:)=SCI(I,:)
+         CALL INTK1 (NRI,RI,TMP1,NRP1,R,TMP2)
+         SC(I,:)=TMP2(:)
+         TMP1(:)=YBI(I,:)
+         CALL INTK1 (NRI,RI,TMP1,NRP1,R,TMP2)
+         YB(I,:)=TMP2(:)
+         TMP1(:)=YFI(I,:)
+         CALL INTK1 (NRI,RI,TMP1,NRP1,R,TMP2)
+         YF(I,:)=TMP2(:)
       ELSEIF (INTERP == 2) THEN
-         CALL SPLINT(NRI,RI,SCI(I,:),NRP1,R,SC(I,:))
-         CALL SPLINT(NRI,RI,YBI(I,:),NRP1,R,YB(I,:))
-         CALL SPLINT(NRI,RI,YFI(I,:),NRP1,R,YF(I,:))
+         TMP1(:)=SCI(I,:)
+         CALL SPLINT(NRI,RI,TMP1,NRP1,R,TMP2)
+         SC(I,:)=TMP2(:)
+         TMP1(:)=YBI(I,:)
+         CALL SPLINT(NRI,RI,TMP1,NRP1,R,TMP2)
+         YB(I,:)=TMP2(:)
+         TMP1(:)=YFI(I,:)
+         CALL SPLINT(NRI,RI,TMP1,NRP1,R,TMP2)
+         YF(I,:)=TMP2(:)
       END IF !(INTERP)
    END DO !I=1,NCI
+   DEALLOCATE(TMP1,TMP2)
 END IF !(IOERR < 0)
 !-----------------------------------------------------------------------------------------------!
 !    Define Chordwise Positions and Interpolate Section                                         !
@@ -644,7 +656,7 @@ IF (ANGPITCH /= 0.D0) THEN
 !-----------------------------------------------------------------------------------------------!
 !    Original Cylindrical Coordinates Definition                                                !
 !-----------------------------------------------------------------------------------------------!
-   RP=DSQRT(YP*YP*ZP*ZP)
+   RP=DSQRT(YP*YP+ZP*ZP)
    TP=DATAN2(ZP,YP)
 !-----------------------------------------------------------------------------------------------!
 !    Root Section                                                                               !

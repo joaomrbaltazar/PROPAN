@@ -1,28 +1,18 @@
 !-----------------------------------------------------------------------------------------------!
 !    Generate Hub Grid                                                                          !
-!    Copyright (C) 2021  J. Baltazar and J.A.C. Falcão de Campos                                !
-!                                                                                               !
-!    This program is free software: you can redistribute it and/or modify it under the terms of !
-!    the GNU Affero General Public License as published by the Free Software Foundation, either !
-!    version 3 of the License, or (at your option) any later version.                           !
-!                                                                                               !
-!    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;  !
-!    without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  !
-!    See the GNU Affero General Public License for more details.                                !
-!                                                                                               !
-!    You should have received a copy of the GNU Affero General Public License                   !
-!    along with this program.  If not, see <https://www.gnu.org/licenses/>.                     !
 !-----------------------------------------------------------------------------------------------!
 SUBROUTINE HUBGRID
 !-----------------------------------------------------------------------------------------------!
 !    Created by: 28102013, J. Baltazar, version 1.0                                             !
 !    Modified  : 09052014, J. Baltazar, new TH at downstream and Cosine on Theta                !
-!                08102014, J. Baltazar, version 1.1                                             !
+!    Modified  : 08102014, J. Baltazar, version 1.1                                             !
+!    Modified  : 25122025, J. Baltazar, 2025 version 1.2a                                       !
 !-----------------------------------------------------------------------------------------------!
 !    Declarations                                                                               !
 !-----------------------------------------------------------------------------------------------!
 USE PROPANEL_MOD
 IMPLICIT NONE
+EXTERNAL :: LININT,INTK1,SPLINT,GRAPE
 INTEGER :: I,J,K
 INTEGER :: NH2,NH3
 DOUBLE PRECISION :: XH1,XH2,TH0,TH1,TH2,TH3,XBM,TBM,PHI

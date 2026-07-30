@@ -1,17 +1,5 @@
 !-----------------------------------------------------------------------------------------------!
 !    Generate Blade Wake Grid                                                                   !
-!    Copyright (C) 2021  J. Baltazar and J.A.C. Falcão de Campos                                !
-!                                                                                               !
-!    This program is free software: you can redistribute it and/or modify it under the terms of !
-!    the GNU Affero General Public License as published by the Free Software Foundation, either !
-!    version 3 of the License, or (at your option) any later version.                           !
-!                                                                                               !
-!    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;  !
-!    without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  !
-!    See the GNU Affero General Public License for more details.                                !
-!                                                                                               !
-!    You should have received a copy of the GNU Affero General Public License                   !
-!    along with this program.  If not, see <https://www.gnu.org/licenses/>.                     !
 !-----------------------------------------------------------------------------------------------!
 SUBROUTINE BLADEWAKEGRID
 !-----------------------------------------------------------------------------------------------!
@@ -26,14 +14,19 @@ SUBROUTINE BLADEWAKEGRID
 !    Modified  : 18042019, J. Baltazar, 2019 version 1.0                                        !
 !    Modified  : 09042020, J. Baltazar, 2020 version 1.0                                        !
 !    Modified  : 17062020, J. Baltazar, 2020 version 1.1                                        !
+!    Modified  : 13102025, J. Baltazar, 2025 version 1.1                                        !
+!    Modified  : 08122025, J. Baltazar, 2025 version 1.2                                        !
+!    Modified  : 30072026, J. Baltazar, 2026 version 1.3                                        !
 !-----------------------------------------------------------------------------------------------!
 !    Declarations                                                                               !
 !-----------------------------------------------------------------------------------------------!
 USE PROPANEL_MOD
 IMPLICIT NONE
+EXTERNAL :: LININT,INTK1,SPLINT,STRET_CHOICE,STRET2,NOZZLEDEF
 INTEGER :: I,J,J1,J2,K,IINI,IFIN
 DOUBLE PRECISION :: XW0,PP,SS,P1,PHI,RR,RU,XC,TC,S0,S1,XN2,XN3
 DOUBLE PRECISION :: CSI,FCSI,ETA,FETA,CSI1,CSI2,CSI3,CSI4
+DOUBLE PRECISION :: K10,K1R,K20,K2R,XC0,XCR,AA,LAMBDA,K1,K2
 DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:)   :: R,PTW0,PTW,DSL,DSL2,S,XTMW
 DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:,:) :: PTMW
 !-----------------------------------------------------------------------------------------------!
@@ -261,7 +254,48 @@ DO J=NRW1,1,-1
          END IF !(IMODELPW)
       END IF !(XPW(I-1,J) < XPWW)
 !-----------------------------------------------------------------------------------------------!
-      IF (ISTEADY == 0) THEN
+!    Landgrebe Prescribed Wake Model for Helicopters                                            !
+!-----------------------------------------------------------------------------------------------!
+      IF (IMODELPW == 6) THEN
+         TC=DSL(I)*2.D0*PI*DFLOAT(NPW)/DFLOAT(NTETA)
+		 IF (J == NRW1) THEN
+            IF (TC <= 2.D0*PI/DFLOAT(NB)) THEN
+               K1=-0.25D0*(CT/SIGMA+0.001D0*THETA)
+               XC= K1*TC-XPW(1,NRW1)
+		    ELSE !(TC <= 2.D0*PI/DFLOAT(NB))
+               K2=-(1.41D0+0.0141D0*THETA)*DSQRT(CT/2.D0)
+               K1=-0.25D0*(CT/SIGMA+0.001D0*THETA)
+               XC=K1*2.D0*PI/DFLOAT(NB)+K2*(TC-2.D0*PI/DFLOAT(NB))-XPW(1,NRW1)
+            END IF !(TC <= 2.D0*PI/DFLOAT(NB))
+            XC    =-XC !Downstream Direction is Positive in PROPAN
+            AA    =0.78D0
+            LAMBDA=0.145D0+27.D0*CT
+            RR    =AA+(1.D0-AA)*DEXP(-LAMBDA*TC)
+            TC=TC+TPW(1,NRW1)
+         ELSE !(J == NRW1)
+            K10=0.D0
+            K1R=-2.2D0*DSQRT(CT/2.D0)
+            K20=(THETA/128.D0)*(0.45D0*THETA+18.D0)*DSQRT(CT/2.D0)
+            K2R=-2.7D0*DSQRT(CT/2.D0)
+            IF (TC <= 2.D0*PI/DFLOAT(NB)) THEN
+               XCR=K1R*TC
+            ELSEIF (TC > 2.D0*PI/DFLOAT(NB)) THEN
+               XCR=K1R*(2.D0*PI)/DFLOAT(NB)+K2R*(TC-2.D0*PI/DFLOAT(NB))
+            END IF !(TC)
+            IF (TC <= PI/2.D0) THEN
+               XC0=K10
+            ELSEIF (TC > PI/2.D0) THEN
+               XC0=K20*(TC-PI/2.D0)
+            END IF !(TC)
+            RR=0.5D0*(RP(1,JI)+RP(NCP1,JI))+ &
+               (RPW(I,NRW1)-0.5D0*(RP(1,JI)+RP(NCP1,JI)))/ &
+               (RP(NCP1,NRW1+JI-1)-RP(NCP1,JI))*(RP(NCP1,J+JI-1)-RP(NCP1,JI))
+			XC=XC0+(XCR-XC0)*(RR/RPW(I,NRW1))
+            XC=-XC+0.5D0*(XP(1,J+JI-1)+XP(NCP1,J+JI-1)) !Downstream Direction is + in PROPAN
+			TC=TC+TPW(1,J)
+         END IF !(J == NRW1)
+!-----------------------------------------------------------------------------------------------!
+      ELSEIF (ISTEADY == 0) THEN
          XC=XPW(1,J)+DSL(I)*XPWT
          IF (IGEOM /= 'WINGGEOM') TC=TPW(I-1,J)+2.D0*PI*DABS(XC-XPW(I-1,J))/PP
          IF (IGEOM == 'WINGGEOM') TC=ZPW(I-1,J)-DABS(XC-XPW(I-1,J))*DTAND(PP)
@@ -311,7 +345,7 @@ DO J=NRW1,1,-1
 !-----------------------------------------------------------------------------------------------!
 !    Radial Coordinate Without Nozzle                                                           !
 !-----------------------------------------------------------------------------------------------!
-      ELSE !((IN == 1).AND.(ISTRIP == 1))
+      ELSEIF (IMODELPW /= 6) THEN
          IF (XPW(I-1,J) < XPWW) THEN
             IF (IMODELPW < 4) THEN
                CSI =(XC-XW0)/(XPWW-XW0)

@@ -1,17 +1,5 @@
 !-----------------------------------------------------------------------------------------------!
 !    Generate Nozzle Grid                                                                       !
-!    Copyright (C) 2021  J. Baltazar and J.A.C. Falcão de Campos                                !
-!                                                                                               !
-!    This program is free software: you can redistribute it and/or modify it under the terms of !
-!    the GNU Affero General Public License as published by the Free Software Foundation, either !
-!    version 3 of the License, or (at your option) any later version.                           !
-!                                                                                               !
-!    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;  !
-!    without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  !
-!    See the GNU Affero General Public License for more details.                                !
-!                                                                                               !
-!    You should have received a copy of the GNU Affero General Public License                   !
-!    along with this program.  If not, see <https://www.gnu.org/licenses/>.                     !
 !-----------------------------------------------------------------------------------------------!
 SUBROUTINE NOZZLEGRID
 !-----------------------------------------------------------------------------------------------!
@@ -19,11 +7,13 @@ SUBROUTINE NOZZLEGRID
 !    Modified  : 21102013, J. Baltazar, version 1.0                                             !
 !    Modified  : 02122014, J. Baltazar, 2014 version 1.2                                        !
 !    Modified  : 19012015, J. Baltazar, 2015 version 1.1, (ALPHAN) cosine on theta              !
+!    Modified  : 25122025, J. Baltazar, 2025 version 1.2a                                       !
 !-----------------------------------------------------------------------------------------------!
 !    Declarations                                                                               !
 !-----------------------------------------------------------------------------------------------!
 USE PROPANEL_MOD
 IMPLICIT NONE
+EXTERNAL :: STRET2,GRAPE,NOZZLEDEF
 INTEGER :: I,J,K
 INTEGER :: LIDENTN,NNU1,NN2
 DOUBLE PRECISION :: XKS,XKSM,ETA,ETAM
