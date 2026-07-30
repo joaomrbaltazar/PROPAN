@@ -19,6 +19,10 @@ Propellers & Turbines: (Open or Ducted)
 * duct grid
 * blade and duct wake grids (user-specify or empirical models)
 
+Helicopter Rotors:
+* conventional blade grids
+* blade wake grids (user-specify or Landgrebe empirical model)
+
 Output: grid output in ASCII text files with Tecplot format
 # PROPAN capabilities:
 Input: ASCII text files
@@ -42,7 +46,7 @@ Wind Turbines:
 
 Helicopter Rotors:
 * steady and unsteady flows
-* empirical rigid wake model (Landgrebe) and wake alignment model
+* empirical rigid wake model and wake alignment model
 
 Output: solution output in ASCII text files with Tecplot format
 
