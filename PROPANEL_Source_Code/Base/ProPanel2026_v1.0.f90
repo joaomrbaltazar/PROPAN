@@ -1,6 +1,6 @@
 !-----------------------------------------------------------------------------------------------!
 !    PROGRAM PROPANEL : PRE-PROCESSOR FOR THE PROPAN PANEL CODE                                 !
-!    Copyright (C) 2021  J. Baltazar and J.A.C. Falcão de Campos                                !
+!    Copyright (C) 2021  J. Baltazar and J.A.C. FalcÃ£o de Campos                                !
 !                                                                                               !
 !    This program is free software: you can redistribute it and/or modify it under the terms of !
 !    the GNU Affero General Public License as published by the Free Software Foundation, either !
@@ -40,6 +40,9 @@
 !    Modified  : 17062020, J. Baltazar, 2020 version 1.1                                        !
 !    Modified  : 00002021, J. Baltazar, 2021 version 1.1                                        !
 !    Modified  : 14082025, J. Baltazar, 2025 version 1.0                                        !
+!    Modified  : 07102025, J. Baltazar, 2025 version 1.1                                        !
+!    Modified  : 08122025, J. Baltazar, 2025 version 1.2                                        !
+!    Modified  : 30072026, J. Baltazar, 2025 version 1.3                                        !
 !-----------------------------------------------------------------------------------------------!
 PROGRAM PROPANEL
 !-----------------------------------------------------------------------------------------------!
@@ -119,6 +122,7 @@ PROGRAM PROPANEL
 !                  IMODELPW=3: ProPan empirical model for ducted propellers                     !
 !                  IMODELPW=4: Hermite interpolation for pitch                                  !
 !                  IMODELPW=5: Linear interpolation for pitch at five (5) stations              !
+!                  IMODELPW=6: Landgrebe prescribed wake model for helicopters                  !
 !                                                                                               !
 !    R0          = Hub radius (IF IMODELPW /= 0)                                                !
 !    R1          = Tip radius (IF IMODELPW /= 0)                                                !
@@ -130,6 +134,9 @@ PROGRAM PROPANEL
 !    NRM         = Number of input radii (max 50) (IF IMODELPW = 5)                             !
 !    RMW(NRM,NMW)= Dimensionless input radii r/Rp (IF IMODELPW = 5)                             !
 !    PMW(NRM,NMW)= Wake pitch / Diameter (rotor) (IF IMODELPW = 5)                              !
+!    CT          = Thrust coefficient (IF MODELPW = 6)                                          !
+!    THETA       = Blade twist in degrees (IF MODELPW = 6)                                      !
+!    SIGMA       = Blade solidity                                                               !
 !                                                                                               !
 !    ISTEADY     = Choice on the wake                                                           !
 !                  ISTEADY=0: Steady wake                                                       !
@@ -244,15 +251,18 @@ PROGRAM PROPANEL
 !    Declarations                                                                               !
 !-----------------------------------------------------------------------------------------------!
 USE PROPANEL_MOD
+IMPLICIT NONE
+EXTERNAL :: PROGRESS,BLADEGRID,BLADEWAKEGRID,NOZZLEGRID,NOZZLEWAKEGRID,HUBGRID,DELVARS
 REAL*4 :: TIME,TIME1,TIME2
 !-----------------------------------------------------------------------------------------------!
 NAMELIST /INPUT/ IP,IN,IH,NB,IDENTP,INTERP,RPH,RMAX,ISC,ALPHAH,ALPHAT,ALPHALE,ALPHATE,ISTRIP,  &
                  ANGPITCH,PGAP,IHCORR,NRP,NC,IDENTPW,NRIW,RIW,PTW0I,PTWI,INTERPW,JI,JF,        &
                  ITYPEPW,ST1PW,ST2PW,ST3PW,ST4PW,IMODELPW,R0,R1,ADVJ,A0,A1,DPTW0,NMW,XMW,NRM,  &
-                 RMW,PMW,ISTEADY,NTETA,XPWW,XPWT,INTECORR,XI,XF,NPW,NRW,IDENTN,LD,CR,IGRIDI,   &
-                 IGRIDO,INTERN,NRNI,XIL,YIL,NRNO,XOL,YOL,NNT,NNU,NND,ALPHAN,PTN,IDENTNW,       &
-                 ITYPENW,ST1NW,ST2NW,ST3NW,ST4NW,NNW,ICONTRNW,R2,XNWW,XNWT,IDENTH,INTERH,NHI,  &
-                 XHI,RHI,XH0,XH3,NHT,NHU,NHD,NHP,XHP,PTH,IHR,ISTEP,ITHETA,ALPHAHT,ITERH
+                 RMW,PMW,CT,THETA,SIGMA,ISTEADY,NTETA,XPWW,XPWT,INTECORR,XI,XF,NPW,NRW,IDENTN, &
+                 LD,CR,IGRIDI,IGRIDO,INTERN,NRNI,XIL,YIL,NRNO,XOL,YOL,NNT,NNU,NND,ALPHAN,PTN,  &
+                 IDENTNW,ITYPENW,ST1NW,ST2NW,ST3NW,ST4NW,NNW,ICONTRNW,R2,XNWW,XNWT,IDENTH,     &
+                 INTERH,NHI,XHI,RHI,XH0,XH3,NHT,NHU,NHD,NHP,XHP,PTH,IHR,ISTEP,ITHETA,ALPHAHT,  &
+                 ITERH
 !-----------------------------------------------------------------------------------------------!
 !    Read Input                                                                                 !
 !-----------------------------------------------------------------------------------------------!
