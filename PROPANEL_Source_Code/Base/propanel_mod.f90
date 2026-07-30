@@ -1,18 +1,4 @@
 !-----------------------------------------------------------------------------------------------!
-!    PROPANEL Module                                                                            !
-!    Copyright (C) 2021  J. Baltazar                                                            !
-!                                                                                               !
-!    This program is free software: you can redistribute it and/or modify it under the terms of !
-!    the GNU Affero General Public License as published by the Free Software Foundation, either !
-!    version 3 of the License, or (at your option) any later version.                           !
-!                                                                                               !
-!    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;  !
-!    without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  !
-!    See the GNU Affero General Public License for more details.                                !
-!                                                                                               !
-!    You should have received a copy of the GNU Affero General Public License                   !
-!    along with this program.  If not, see <https://www.gnu.org/licenses/>.                     !
-!-----------------------------------------------------------------------------------------------!
 MODULE PROPANEL_MOD
 !-----------------------------------------------------------------------------------------------!
 !    Created by: 11102013, J. Baltazar, 2013 version 1.0                                        !
@@ -28,6 +14,8 @@ MODULE PROPANEL_MOD
 !    Modified  : 04012018, J. Baltazar, 2018 version 1.0                                        !
 !    Modified  : 09042020, J. Baltazar, 2020 version 1.0                                        !
 !    Modified  : 17062020, J. Baltazar, 2020 version 1.1                                        !
+!    Modified  : 08122025, J. Baltazar, 2025 version 1.2                                        !
+!    Modified  : 30072026, J. Baltazar, 2026 version 1.0                                        !
 !-----------------------------------------------------------------------------------------------!
 IMPLICIT NONE
 CHARACTER*8  IGEOM
@@ -45,7 +33,7 @@ DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:,:) :: XP,YP,ZP,RP,TP
 !-----------------------------------------------------------------------------------------------!
 CHARACTER*10 IDENTPW
 INTEGER :: INTERPW,NPW1,NPW,NRW1,NRW,NRIW,JI,JF,ITYPEPW,IMODELPW,ISTEADY,NTETA,INTECORR,NMW,NRM
-DOUBLE PRECISION :: ST1PW,ST2PW,ST3PW,ST4PW,R0,R1,ADVJ,XPWW,XPWT,XI,XF,A0,A1
+DOUBLE PRECISION :: ST1PW,ST2PW,ST3PW,ST4PW,R0,R1,ADVJ,XPWW,XPWT,XI,XF,A0,A1,CT,THETA,SIGMA
 DOUBLE PRECISION :: RIW(50),PTW0I(50),PTWI(50),DPTW0,XMW(10),RMW(500),PMW(500)
 DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:,:) :: XPW,YPW,ZPW,RPW,TPW
 !-----------------------------------------------------------------------------------------------!
